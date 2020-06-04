@@ -1,0 +1,15 @@
+-- HA11 result
+--------------------------------------------
+HostNestNum = 15, P_a = 0.1
+--------------------------------------------
+-- 2020-03-06 15:54 result data
+OFV: 627.5	/ CPU: 20.919 seconds 	/ department sequence: [12, 14, 13, 3, 1, 2, 6, 7, 11, 15, 9, 8, 10, 4, 5]	cutting order: 10
+OFV: 615.5	/ CPU: 13.967 seconds 	/ department sequence: [11, 7, 6, 2, 10, 8, 3, 14, 13, 12, 5, 4, 1, 9, 15]	cutting order: 7
+OFV: 660.5	/ CPU: 13.443 seconds 	/ department sequence: [12, 13, 14, 15, 2, 6, 5, 7, 11, 8, 3, 4, 1, 10, 9]	cutting order: 11
+OFV: 638.5	/ CPU: 12.567 seconds 	/ department sequence: [12, 1, 6, 5, 3, 7, 13, 14, 15, 11, 4, 2, 10, 8, 9]	cutting order: 6
+OFV: 692.0	/ CPU: 18.647 seconds 	/ department sequence: [15, 14, 1, 6, 5, 9, 7, 13, 12, 11, 3, 4, 2, 8, 10]	cutting order: 9
+OFV: 615.5	/ CPU: 13.323 seconds 	/ department sequence: [11, 7, 6, 2, 10, 8, 3, 14, 13, 12, 15, 5, 4, 1, 9]	cutting order: 8
+OFV: 638.5	/ CPU: 12.834 seconds 	/ department sequence: [1, 6, 5, 3, 14, 7, 13, 12, 15, 11, 4, 2, 10, 8, 9]	cutting order: 7
+OFV: 631.5	/ CPU: 14.623 seconds 	/ department sequence: [14, 3, 1, 2, 6, 7, 11, 12, 15, 13, 9, 8, 10, 4, 5]	cutting order: 10
+OFV: 692.0	/ CPU: 19.229 seconds 	/ department sequence: [13, 15, 1, 6, 5, 9, 7, 12, 14, 11, 3, 4, 2, 8, 10]	cutting order: 9
+OFV: 638.5	/ CPU: 12.914 seconds 	/ department sequence: [1, 6, 5, 3, 7, 14, 15, 12, 13, 11, 4, 2, 10, 8, 9]	cutting order: 7

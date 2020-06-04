@@ -1,0 +1,12 @@
+-- HA15 result
+--------------------------------------------
+HostNestNum = 10, P_a = 0.0
+--------------------------------------------
+-- 2020-03-06 13:21 result data
+OFV: 52.5	/ CPU: 2.262 seconds 	/ department sequence: [1, 4, 3, 5, 2]	cutting order: 1
+OFV: 52.5	/ CPU: 6.833 seconds 	/ department sequence: [4, 3, 5, 2, 1]	cutting order: 4
+-- HA15 result
+--------------------------------------------
+HostNestNum = 10, P_a = 0.0
+--------------------------------------------
+-- 2020-03-07 20:46 result data

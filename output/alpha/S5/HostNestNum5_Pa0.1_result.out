@@ -1,0 +1,15 @@
+-- S5 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.1
+--------------------------------------------
+-- 2019-01-07 15:45 result data
+OFV: 151.0	/ CPU: 1.027 seconds 	/ department sequence: [3, 4, 5, 1, 2]
+OFV: 151.0	/ CPU: 0.951 seconds 	/ department sequence: [4, 3, 5, 1, 2]
+OFV: 151.0	/ CPU: 0.606 seconds 	/ department sequence: [4, 3, 5, 1, 2]
+OFV: 151.0	/ CPU: 0.591 seconds 	/ department sequence: [2, 1, 5, 4, 3]
+OFV: 151.0	/ CPU: 0.665 seconds 	/ department sequence: [2, 1, 5, 4, 3]
+OFV: 151.0	/ CPU: 0.601 seconds 	/ department sequence: [2, 1, 5, 3, 4]
+OFV: 151.0	/ CPU: 0.641 seconds 	/ department sequence: [3, 4, 5, 1, 2]
+OFV: 151.0	/ CPU: 0.621 seconds 	/ department sequence: [2, 1, 5, 3, 4]
+OFV: 151.0	/ CPU: 0.573 seconds 	/ department sequence: [3, 4, 5, 1, 2]
+OFV: 151.0	/ CPU: 0.600 seconds 	/ department sequence: [4, 3, 5, 1, 2]

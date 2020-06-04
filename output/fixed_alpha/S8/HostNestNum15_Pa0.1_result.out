@@ -1,0 +1,15 @@
+-- S8 result
+--------------------------------------------
+HostNestNum = 15, P_a = 0.1
+--------------------------------------------
+-- 2019-01-07 17:23 result data
+OFV: 801.0	/ CPU: 0.782 seconds 	/ department sequence: [4, 6, 8, 3, 5, 1, 2, 7]
+OFV: 801.0	/ CPU: 0.779 seconds 	/ department sequence: [4, 6, 8, 3, 5, 1, 2, 7]
+OFV: 801.0	/ CPU: 0.779 seconds 	/ department sequence: [7, 2, 1, 5, 3, 8, 6, 4]
+OFV: 801.0	/ CPU: 0.770 seconds 	/ department sequence: [7, 2, 1, 5, 3, 8, 6, 4]
+OFV: 801.0	/ CPU: 0.835 seconds 	/ department sequence: [4, 6, 8, 3, 5, 1, 2, 7]
+OFV: 801.0	/ CPU: 0.812 seconds 	/ department sequence: [4, 6, 8, 3, 5, 1, 2, 7]
+OFV: 801.0	/ CPU: 0.782 seconds 	/ department sequence: [7, 2, 1, 5, 3, 8, 6, 4]
+OFV: 801.0	/ CPU: 0.772 seconds 	/ department sequence: [4, 6, 8, 3, 5, 1, 2, 7]
+OFV: 801.0	/ CPU: 0.767 seconds 	/ department sequence: [4, 6, 8, 3, 5, 1, 2, 7]
+OFV: 801.0	/ CPU: 0.769 seconds 	/ department sequence: [4, 6, 8, 3, 5, 1, 2, 7]

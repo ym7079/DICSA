@@ -1,0 +1,77 @@
+-- HA9 result
+--------------------------------------------
+HostNestNum = 10, P_a = 0.25
+--------------------------------------------
+-- 2020-03-06 14:10 result data
+OFV: 505.0	/ CPU: 10.962 seconds 	/ department sequence: [1, 8, 5, 6, 13, 10, 11, 4, 3, 7, 2, 9, 12]	cutting order: 4
+OFV: 505.5	/ CPU: 11.725 seconds 	/ department sequence: [13, 10, 7, 2, 8, 6, 5, 4, 12, 11, 3, 9, 1]	cutting order: 10
+OFV: 499.5	/ CPU: 7.905 seconds 	/ department sequence: [3, 9, 8, 2, 10, 12, 11, 7, 13, 4, 6, 5, 1]	cutting order: 5
+OFV: 493.5	/ CPU: 8.316 seconds 	/ department sequence: [13, 11, 7, 9, 1, 10, 12, 3, 4, 6, 5, 8, 2]	cutting order: 7
+OFV: 496.0	/ CPU: 12.334 seconds 	/ department sequence: [10, 13, 11, 7, 8, 5, 6, 1, 12, 3, 2, 9, 4]	cutting order: 9
+OFV: 495.5	/ CPU: 14.528 seconds 	/ department sequence: [3, 4, 6, 5, 1, 10, 12, 11, 7, 9, 8, 2, 13]	cutting order: 6
+OFV: 492.5	/ CPU: 9.370 seconds 	/ department sequence: [13, 2, 8, 5, 9, 7, 12, 1, 6, 4, 3, 10, 11]	cutting order: 6
+OFV: 493.5	/ CPU: 8.901 seconds 	/ department sequence: [3, 4, 6, 5, 8, 2, 13, 10, 12, 11, 7, 9, 1]	cutting order: 8
+OFV: 486.5	/ CPU: 15.133 seconds 	/ department sequence: [9, 5, 8, 2, 3, 11, 13, 12, 10, 4, 6, 1, 7]	cutting order: 5
+OFV: 486.5	/ CPU: 8.156 seconds 	/ department sequence: [9, 1, 7, 11, 10, 13, 12, 4, 6, 5, 8, 2, 3]	cutting order: 3
+-- HA9 result
+--------------------------------------------
+HostNestNum = 10, P_a = 0.25
+--------------------------------------------
+-- 2020-03-08 18:31 result data
+OFV: 492.5	/ CPU: 11.571 seconds 	/ department sequence: [10, 3, 7, 9, 4, 6, 1, 5, 8, 2]	upper(t) or lower(f): true
+OFV: 492.5	/ CPU: 8.316 seconds 	/ department sequence: [1, 2, 8, 5, 9, 6, 4, 3, 7, 10]	upper(t) or lower(f): true
+-- HA9 result
+--------------------------------------------
+HostNestNum = 10, P_a = 0.25
+--------------------------------------------
+-- 2020-03-08 18:35 result data
+OFV: 486.5	/ CPU: 8.002 seconds 	/ department sequence: [12, 3, 7, 1, 2, 8, 5, 6, 9, 4, 11, 10]	upper(t) or lower(f): false
+OFV: 492.5	/ CPU: 8.507 seconds 	/ department sequence: [12, 10, 11, 3, 7, 9, 4, 6, 1, 5, 8, 2]	upper(t) or lower(f): true
+OFV: 486.5	/ CPU: 9.912 seconds 	/ department sequence: [10, 11, 12, 3, 7, 1, 2, 8, 5, 9, 6, 4]	upper(t) or lower(f): false
+OFV: 492.5	/ CPU: 10.504 seconds 	/ department sequence: [11, 3, 7, 9, 4, 6, 1, 5, 8, 2, 12, 10]	upper(t) or lower(f): true
+OFV: 486.5	/ CPU: 9.465 seconds 	/ department sequence: [12, 9, 10, 4, 6, 5, 1, 8, 2, 3, 7, 11]	upper(t) or lower(f): false
+OFV: 486.5	/ CPU: 7.816 seconds 	/ department sequence: [11, 3, 7, 1, 2, 8, 5, 9, 6, 4, 12, 10]	upper(t) or lower(f): false
+OFV: 486.5	/ CPU: 9.008 seconds 	/ department sequence: [12, 10, 3, 11, 7, 1, 2, 8, 5, 9, 6, 4]	upper(t) or lower(f): false
+OFV: 492.5	/ CPU: 10.294 seconds 	/ department sequence: [10, 11, 12, 3, 7, 9, 4, 6, 1, 5, 8, 2]	upper(t) or lower(f): true
+OFV: 486.5	/ CPU: 12.520 seconds 	/ department sequence: [10, 12, 11, 3, 7, 1, 2, 8, 5, 6, 9, 4]	upper(t) or lower(f): true
+OFV: 486.5	/ CPU: 9.677 seconds 	/ department sequence: [9, 11, 12, 4, 6, 5, 1, 8, 2, 3, 7, 10]	upper(t) or lower(f): true
+-- HA9 result
+--------------------------------------------
+HostNestNum = 10, P_a = 0.25
+--------------------------------------------
+-- 2020-03-08 18:41 result data
+OFV: 486.5	/ CPU: 6.630 seconds 	/ department sequence: [10, 3, 7, 1, 2, 8, 5, 6, 9, 4]	upper(t) or lower(f): false
+OFV: 492.5	/ CPU: 10.291 seconds 	/ department sequence: [3, 10, 7, 9, 4, 6, 1, 5, 8, 2]	upper(t) or lower(f): true
+OFV: 486.5	/ CPU: 9.310 seconds 	/ department sequence: [10, 3, 7, 1, 2, 8, 5, 6, 9, 4]	upper(t) or lower(f): false
+OFV: 486.5	/ CPU: 9.360 seconds 	/ department sequence: [3, 10, 7, 1, 2, 8, 5, 9, 6, 4]	upper(t) or lower(f): false
+OFV: 486.5	/ CPU: 9.123 seconds 	/ department sequence: [10, 3, 7, 1, 2, 8, 5, 9, 6, 4]	upper(t) or lower(f): false
+OFV: 486.5	/ CPU: 10.200 seconds 	/ department sequence: [10, 3, 7, 1, 2, 8, 5, 6, 9, 4]	upper(t) or lower(f): true
+OFV: 486.5	/ CPU: 18.313 seconds 	/ department sequence: [10, 3, 7, 1, 2, 8, 5, 9, 6, 4]	upper(t) or lower(f): true
+OFV: 495.5	/ CPU: 10.909 seconds 	/ department sequence: [10, 9, 4, 6, 1, 5, 8, 2, 7, 3]	upper(t) or lower(f): true
+OFV: 495.5	/ CPU: 11.751 seconds 	/ department sequence: [10, 9, 4, 6, 1, 5, 8, 2, 7, 3]	upper(t) or lower(f): true
+OFV: 486.5	/ CPU: 8.617 seconds 	/ department sequence: [3, 10, 7, 1, 2, 8, 5, 9, 6, 4]	upper(t) or lower(f): false
+-- HA9 result
+--------------------------------------------
+HostNestNum = 10, P_a = 0.25
+--------------------------------------------
+-- 2020-03-08 19:25 result data
+OFV: 495.5	/ CPU: 8.569 seconds 
+department sequence: [10, 9, 4, 6, 1, 5, 8, 2, 7, 3]	upper(t) or lower(f): false	true	false	false	false	true	true	true	true	false	
+OFV: 486.5	/ CPU: 8.562 seconds 
+department sequence: [10, 3, 7, 1, 2, 8, 5, 9, 6, 4]	upper(t) or lower(f): true	false	true	true	false	false	false	true	false	false	
+OFV: 492.5	/ CPU: 8.215 seconds 
+department sequence: [3, 10, 7, 9, 4, 6, 1, 5, 8, 2]	upper(t) or lower(f): false	true	true	true	false	false	false	true	true	true	
+OFV: 486.5	/ CPU: 11.351 seconds 
+department sequence: [3, 10, 7, 1, 2, 8, 5, 9, 6, 4]	upper(t) or lower(f): true	false	false	false	true	true	true	true	false	false	
+OFV: 486.5	/ CPU: 9.526 seconds 
+department sequence: [10, 3, 7, 1, 2, 8, 5, 6, 9, 4]	upper(t) or lower(f): false	true	false	false	true	true	true	true	false	true	
+OFV: 492.5	/ CPU: 9.010 seconds 
+department sequence: [3, 10, 7, 9, 4, 6, 1, 5, 8, 2]	upper(t) or lower(f): true	false	false	false	true	true	true	false	false	false	
+OFV: 486.5	/ CPU: 10.219 seconds 
+department sequence: [10, 3, 7, 1, 2, 8, 5, 9, 6, 4]	upper(t) or lower(f): false	true	false	false	true	true	true	true	false	false	
+OFV: 486.5	/ CPU: 10.990 seconds 
+department sequence: [10, 3, 7, 1, 2, 8, 5, 9, 6, 4]	upper(t) or lower(f): false	true	false	false	true	true	true	true	false	false	
+OFV: 492.5	/ CPU: 8.502 seconds 
+department sequence: [10, 3, 7, 9, 4, 6, 1, 5, 8, 2]	upper(t) or lower(f): false	true	false	false	true	true	true	false	false	false	
+OFV: 492.5	/ CPU: 11.451 seconds 
+department sequence: [3, 10, 7, 9, 4, 6, 1, 5, 8, 2]	upper(t) or lower(f): true	false	false	false	true	true	true	false	false	false	

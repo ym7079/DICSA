@@ -1,0 +1,30 @@
+-- S8H result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+-- 2019-01-07 17:34 result data
+OFV: 2324.5	/ CPU: 1.036 seconds 	/ department sequence: [7, 8, 1, 5, 4, 6, 3, 2]
+OFV: 2324.5	/ CPU: 0.905 seconds 	/ department sequence: [2, 3, 6, 4, 5, 1, 8, 7]
+OFV: 2324.5	/ CPU: 0.791 seconds 	/ department sequence: [2, 3, 6, 4, 5, 1, 8, 7]
+OFV: 2324.5	/ CPU: 0.795 seconds 	/ department sequence: [7, 8, 1, 5, 4, 6, 3, 2]
+OFV: 2324.5	/ CPU: 0.710 seconds 	/ department sequence: [2, 3, 6, 4, 5, 1, 8, 7]
+OFV: 2324.5	/ CPU: 1.067 seconds 	/ department sequence: [2, 3, 6, 4, 5, 1, 8, 7]
+OFV: 2324.5	/ CPU: 0.818 seconds 	/ department sequence: [2, 3, 6, 4, 5, 1, 8, 7]
+OFV: 2324.5	/ CPU: 0.754 seconds 	/ department sequence: [7, 8, 1, 5, 4, 6, 3, 2]
+OFV: 2324.5	/ CPU: 0.740 seconds 	/ department sequence: [7, 8, 1, 5, 4, 6, 3, 2]
+OFV: 2324.5	/ CPU: 0.727 seconds 	/ department sequence: [7, 8, 1, 5, 4, 6, 3, 2]
+-- S8H result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+-- 2019-01-14 14:44 result data
+OFV: 2324.5	/ CPU: 0.359 seconds 	/ department sequence: [7, 8, 1, 5, 4, 6, 3, 2]
+OFV: 2324.5	/ CPU: 0.234 seconds 	/ department sequence: [2, 3, 6, 4, 5, 1, 8, 7]
+OFV: 2324.5	/ CPU: 0.234 seconds 	/ department sequence: [7, 8, 1, 5, 4, 6, 3, 2]
+OFV: 2324.5	/ CPU: 0.203 seconds 	/ department sequence: [2, 3, 6, 4, 5, 1, 8, 7]
+OFV: 2324.5	/ CPU: 0.203 seconds 	/ department sequence: [2, 3, 6, 4, 5, 1, 8, 7]
+OFV: 2324.5	/ CPU: 0.219 seconds 	/ department sequence: [2, 3, 6, 4, 5, 1, 8, 7]
+OFV: 2324.5	/ CPU: 0.203 seconds 	/ department sequence: [2, 3, 6, 4, 5, 1, 8, 7]
+OFV: 2324.5	/ CPU: 0.328 seconds 	/ department sequence: [7, 8, 1, 5, 4, 6, 3, 2]
+OFV: 2324.5	/ CPU: 0.297 seconds 	/ department sequence: [2, 3, 6, 4, 5, 1, 8, 7]
+OFV: 2324.5	/ CPU: 0.219 seconds 	/ department sequence: [7, 8, 1, 5, 4, 6, 3, 2]

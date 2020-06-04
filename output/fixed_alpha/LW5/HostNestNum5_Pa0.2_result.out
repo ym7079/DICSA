@@ -1,0 +1,15 @@
+-- LW5 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.2
+--------------------------------------------
+-- 2019-01-07 17:16 result data
+OFV: 151.0	/ CPU: 0.423 seconds 	/ department sequence: [3, 4, 5, 1, 2]
+OFV: 151.0	/ CPU: 0.375 seconds 	/ department sequence: [2, 1, 5, 3, 4]
+OFV: 151.0	/ CPU: 0.384 seconds 	/ department sequence: [3, 4, 5, 1, 2]
+OFV: 151.0	/ CPU: 0.408 seconds 	/ department sequence: [3, 4, 5, 1, 2]
+OFV: 151.0	/ CPU: 0.385 seconds 	/ department sequence: [2, 1, 5, 4, 3]
+OFV: 151.0	/ CPU: 0.378 seconds 	/ department sequence: [4, 3, 5, 1, 2]
+OFV: 151.0	/ CPU: 0.377 seconds 	/ department sequence: [2, 1, 5, 4, 3]
+OFV: 151.0	/ CPU: 0.383 seconds 	/ department sequence: [2, 1, 5, 4, 3]
+OFV: 151.0	/ CPU: 0.375 seconds 	/ department sequence: [2, 1, 5, 4, 3]
+OFV: 151.0	/ CPU: 0.393 seconds 	/ department sequence: [2, 1, 5, 3, 4]

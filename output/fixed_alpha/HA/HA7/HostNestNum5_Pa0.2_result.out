@@ -1,0 +1,8 @@
+-- HA7 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.2
+--------------------------------------------
+-- 2020-05-24 22:27 result data
+OFV: 159.0	/ CPU: 8.930 seconds 	/ department sequence: [3, 6, 4, 2, 1, 5, 7]
+OFV: 159.0	/ CPU: 8.078 seconds 	/ department sequence: [3, 6, 4, 2, 1, 5, 7]
+OFV: 159.0	/ CPU: 8.859 seconds 	/ department sequence: [6, 3, 4, 2, 1, 5, 7]

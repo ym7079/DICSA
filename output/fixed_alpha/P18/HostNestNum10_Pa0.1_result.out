@@ -1,0 +1,15 @@
+-- P18 result
+--------------------------------------------
+HostNestNum = 10, P_a = 0.1
+--------------------------------------------
+-- 2019-01-08 14:38 result data
+OFV: 11151.5	/ CPU: 2.548 seconds 	/ department sequence: [1, 17, 3, 18, 10, 8, 11, 4, 12, 14, 2, 16, 15, 7, 5, 6, 13, 9]
+OFV: 10650.5	/ CPU: 2.458 seconds 	/ department sequence: [9, 13, 3, 6, 10, 18, 14, 2, 15, 12, 8, 16, 11, 4, 7, 5, 17, 1]
+OFV: 11214.5	/ CPU: 1.951 seconds 	/ department sequence: [9, 13, 16, 15, 8, 11, 12, 14, 2, 4, 7, 6, 5, 10, 18, 3, 17, 1]
+OFV: 10677.5	/ CPU: 2.632 seconds 	/ department sequence: [9, 13, 3, 6, 10, 5, 18, 14, 2, 16, 4, 11, 12, 8, 15, 7, 17, 1]
+OFV: 10677.5	/ CPU: 1.907 seconds 	/ department sequence: [9, 13, 3, 6, 10, 5, 18, 14, 2, 16, 4, 11, 12, 8, 15, 7, 17, 1]
+OFV: 10677.5	/ CPU: 2.314 seconds 	/ department sequence: [1, 17, 7, 15, 8, 12, 11, 4, 16, 2, 14, 18, 5, 10, 6, 3, 13, 9]
+OFV: 10650.5	/ CPU: 2.227 seconds 	/ department sequence: [1, 17, 5, 7, 4, 11, 16, 8, 12, 15, 2, 14, 18, 10, 6, 3, 13, 9]
+OFV: 11151.5	/ CPU: 1.894 seconds 	/ department sequence: [9, 13, 6, 5, 7, 15, 16, 2, 14, 12, 4, 11, 8, 10, 18, 3, 17, 1]
+OFV: 10677.5	/ CPU: 2.881 seconds 	/ department sequence: [1, 17, 7, 15, 8, 12, 11, 4, 16, 2, 14, 18, 5, 10, 6, 3, 13, 9]
+OFV: 10971.5	/ CPU: 2.137 seconds 	/ department sequence: [9, 3, 18, 10, 14, 16, 2, 4, 11, 12, 8, 15, 7, 6, 5, 13, 17, 1]

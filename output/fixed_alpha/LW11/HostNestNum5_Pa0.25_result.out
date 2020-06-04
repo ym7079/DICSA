@@ -1,0 +1,15 @@
+-- LW11 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2019-01-08 09:34 result data
+OFV: 6933.5	/ CPU: 0.930 seconds 	/ department sequence: [11, 10, 3, 8, 2, 7, 5, 1, 9, 4, 6]
+OFV: 6933.5	/ CPU: 0.936 seconds 	/ department sequence: [6, 4, 9, 1, 5, 7, 2, 8, 3, 10, 11]
+OFV: 6933.5	/ CPU: 1.265 seconds 	/ department sequence: [11, 10, 3, 8, 2, 7, 5, 1, 9, 4, 6]
+OFV: 7041.5	/ CPU: 0.961 seconds 	/ department sequence: [11, 6, 4, 9, 1, 5, 8, 7, 2, 3, 10]
+OFV: 6933.5	/ CPU: 1.148 seconds 	/ department sequence: [6, 4, 9, 1, 5, 7, 2, 8, 3, 10, 11]
+OFV: 6933.5	/ CPU: 0.951 seconds 	/ department sequence: [11, 10, 3, 8, 2, 7, 5, 1, 9, 4, 6]
+OFV: 6933.5	/ CPU: 1.139 seconds 	/ department sequence: [11, 10, 3, 8, 2, 7, 5, 1, 9, 4, 6]
+OFV: 6933.5	/ CPU: 1.391 seconds 	/ department sequence: [6, 4, 9, 1, 5, 7, 2, 8, 3, 10, 11]
+OFV: 6933.5	/ CPU: 1.053 seconds 	/ department sequence: [6, 4, 9, 1, 5, 7, 2, 8, 3, 10, 11]
+OFV: 6933.5	/ CPU: 0.920 seconds 	/ department sequence: [6, 4, 9, 1, 5, 7, 2, 8, 3, 10, 11]

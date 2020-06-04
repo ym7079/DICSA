@@ -1,0 +1,24 @@
+-- H_20 result
+--------------------------------------------
+HostNestNum = 15, P_a = 0.25
+--------------------------------------------
+-- 2019-01-06 10:26summary result data
+OFV: 15854.0	/ CPU: 4.44	/ department sequence: [1, 17, 3, 18, 10, 5, 6, 7, 8, 12, 11, 4, 14, 2, 16, 15, 20, 19, 13, 9]
+-- 2019-01-06 10:26summary result data
+OFV: 15549.0	/ CPU: 4.61	/ department sequence: [9, 3, 18, 10, 19, 14, 2, 15, 16, 4, 11, 12, 8, 20, 7, 6, 5, 13, 17, 1]
+-- 2019-01-06 10:26summary result data
+OFV: 15868.0	/ CPU: 5.366	/ department sequence: [1, 17, 3, 18, 10, 5, 6, 7, 12, 14, 2, 4, 11, 16, 8, 15, 20, 19, 13, 9]
+-- 2019-01-06 10:26summary result data
+OFV: 15857.0	/ CPU: 4.846	/ department sequence: [9, 13, 19, 16, 15, 20, 2, 4, 14, 11, 12, 8, 7, 6, 5, 10, 18, 3, 17, 1]
+-- 2019-01-06 10:26summary result data
+OFV: 15935.0	/ CPU: 10.209	/ department sequence: [1, 17, 3, 18, 10, 19, 15, 14, 2, 12, 8, 4, 11, 16, 20, 7, 6, 5, 13, 9]
+-- 2019-01-06 10:27summary result data
+OFV: 15549.0	/ CPU: 6.291	/ department sequence: [1, 17, 13, 5, 6, 7, 20, 8, 12, 11, 4, 16, 15, 2, 14, 19, 10, 18, 3, 9]
+-- 2019-01-06 10:27summary result data
+OFV: 15549.0	/ CPU: 8.114	/ department sequence: [1, 17, 13, 5, 6, 7, 20, 8, 12, 11, 4, 16, 15, 2, 14, 19, 10, 18, 3, 9]
+-- 2019-01-06 10:27summary result data
+OFV: 15795.0	/ CPU: 5.836	/ department sequence: [1, 17, 5, 19, 7, 15, 20, 8, 12, 2, 4, 11, 16, 14, 18, 10, 6, 3, 13, 9]
+-- 2019-01-06 10:27summary result data
+OFV: 15935.0	/ CPU: 6.907	/ department sequence: [1, 17, 3, 18, 10, 19, 15, 14, 2, 12, 8, 4, 11, 16, 20, 7, 6, 5, 13, 9]
+-- 2019-01-06 10:27summary result data
+OFV: 15549.0	/ CPU: 4.387	/ department sequence: [1, 17, 13, 5, 6, 7, 20, 8, 12, 11, 4, 16, 15, 2, 14, 19, 10, 18, 3, 9]

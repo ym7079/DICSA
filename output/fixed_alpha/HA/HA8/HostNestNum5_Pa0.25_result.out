@@ -1,0 +1,26 @@
+-- HA8 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-03-07 21:01 result data
+OFV: 189.5	/ CPU: 4.057 seconds 	/ department sequence: [10, 3, 11, 9, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 5.470 seconds 	/ department sequence: [9, 3, 11, 10, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 198.0	/ CPU: 3.830 seconds 	/ department sequence: [9, 4, 11, 10, 2, 8, 6, 7, 5, 3, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 4.572 seconds 	/ department sequence: [3, 9, 11, 10, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 3.276 seconds 	/ department sequence: [3, 9, 11, 10, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 4.182 seconds 	/ department sequence: [9, 3, 11, 10, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 5.059 seconds 	/ department sequence: [10, 3, 11, 9, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 8.183 seconds 	/ department sequence: [11, 3, 10, 9, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 5.066 seconds 	/ department sequence: [3, 10, 9, 11, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 3.506 seconds 	/ department sequence: [3, 10, 9, 11, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+-- HA8 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-03-08 18:06 result data
+OFV: 189.5	/ CPU: 4.322 seconds 	/ department sequence: [9, 3, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 3.737 seconds 	/ department sequence: [9, 3, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 4.265 seconds 	/ department sequence: [3, 9, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 7.303 seconds 	/ department sequence: [3, 9, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 3.593 seconds 	/ department sequence: [9, 3, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 6.884 seconds 	/ department sequence: [9, 3, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0

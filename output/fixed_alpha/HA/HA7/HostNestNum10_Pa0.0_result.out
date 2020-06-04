@@ -1,0 +1,15 @@
+-- HA7 result
+--------------------------------------------
+HostNestNum = 10, P_a = 0.0
+--------------------------------------------
+-- 2020-03-06 13:49 result data
+OFV: 159.0	/ CPU: 17.503 seconds 	/ department sequence: [11, 8, 6, 4, 1, 3, 2, 5, 10, 9, 7]	cutting order: 5
+OFV: 159.0	/ CPU: 6.456 seconds 	/ department sequence: [3, 2, 5, 8, 9, 7, 11, 10, 6, 4, 1]	cutting order: 6
+OFV: 159.0	/ CPU: 6.468 seconds 	/ department sequence: [3, 2, 5, 10, 9, 7, 8, 11, 6, 4, 1]	cutting order: 6
+OFV: 159.0	/ CPU: 6.546 seconds 	/ department sequence: [3, 2, 5, 10, 9, 7, 11, 8, 6, 4, 1]	cutting order: 6
+OFV: 159.0	/ CPU: 6.485 seconds 	/ department sequence: [3, 2, 5, 11, 10, 7, 9, 8, 6, 4, 1]	cutting order: 6
+-- HA7 result
+--------------------------------------------
+HostNestNum = 10, P_a = 0.0
+--------------------------------------------
+-- 2020-03-07 20:55 result data

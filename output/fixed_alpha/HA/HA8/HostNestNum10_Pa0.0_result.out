@@ -1,0 +1,15 @@
+-- HA8 result
+--------------------------------------------
+HostNestNum = 10, P_a = 0.0
+--------------------------------------------
+-- 2020-03-07 21:02 result data
+OFV: 189.5	/ CPU: 13.101 seconds 	/ department sequence: [3, 11, 9, 10, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 5.344 seconds 	/ department sequence: [3, 11, 10, 9, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 5.261 seconds 	/ department sequence: [10, 3, 9, 11, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 7.810 seconds 	/ department sequence: [11, 3, 10, 9, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 7.879 seconds 	/ department sequence: [3, 10, 11, 9, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 12.547 seconds 	/ department sequence: [11, 3, 10, 9, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 5.694 seconds 	/ department sequence: [11, 3, 9, 10, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 7.140 seconds 	/ department sequence: [3, 10, 11, 9, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 6.338 seconds 	/ department sequence: [9, 3, 10, 11, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0
+OFV: 189.5	/ CPU: 5.310 seconds 	/ department sequence: [3, 9, 10, 11, 5, 7, 6, 8, 2, 4, 1]	cutting order: 0

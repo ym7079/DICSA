@@ -1,0 +1,10 @@
+-- CL5 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.1
+--------------------------------------------
+-- 2019-01-07 14:52 result data
+OFV: 0.7999999999999999	/ CPU: 1.031 seconds 	/ department sequence: [3, 2, 1, 5, 4]
+OFV: 0.7999999999999999	/ CPU: 0.969 seconds 	/ department sequence: [4, 5, 1, 2, 3]
+OFV: 0.7999999999999999	/ CPU: 0.665 seconds 	/ department sequence: [4, 5, 1, 2, 3]
+OFV: 0.7999999999999999	/ CPU: 0.572 seconds 	/ department sequence: [3, 2, 1, 5, 4]
+OFV: 0.7999999999999999	/ CPU: 0.670 seconds 	/ department sequence: [4, 5, 1, 2, 3]

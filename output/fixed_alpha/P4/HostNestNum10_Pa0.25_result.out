@@ -1,0 +1,15 @@
+-- P4 result
+--------------------------------------------
+HostNestNum = 10, P_a = 0.25
+--------------------------------------------
+-- 2019-01-06 14:38 result data
+OFV: 638.0	/ CPU: 1.362 seconds 	/ department sequence: [2, 1, 4, 3]
+OFV: 638.0	/ CPU: 1.261 seconds 	/ department sequence: [2, 1, 4, 3]
+OFV: 638.0	/ CPU: 1.258 seconds 	/ department sequence: [3, 4, 1, 2]
+OFV: 638.0	/ CPU: 1.263 seconds 	/ department sequence: [2, 1, 4, 3]
+OFV: 638.0	/ CPU: 1.332 seconds 	/ department sequence: [3, 4, 1, 2]
+OFV: 638.0	/ CPU: 1.285 seconds 	/ department sequence: [2, 1, 4, 3]
+OFV: 638.0	/ CPU: 1.339 seconds 	/ department sequence: [2, 1, 4, 3]
+OFV: 638.0	/ CPU: 1.339 seconds 	/ department sequence: [2, 1, 4, 3]
+OFV: 638.0	/ CPU: 1.332 seconds 	/ department sequence: [3, 4, 1, 2]
+OFV: 638.0	/ CPU: 1.430 seconds 	/ department sequence: [3, 4, 1, 2]

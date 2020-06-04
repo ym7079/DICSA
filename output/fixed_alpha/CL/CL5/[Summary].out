@@ -1,0 +1,21 @@
+CL5 summary
+
+-- 2019-01-07 15:16 result data
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+CL5 summary
+
+-- 2020-03-24 21:06 result data
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 0.7999999999999999	CPU Time : 0.118 seconds (Processing time for the best solution)
+Average OFV : 0.800
+Average CPU Time : 0.151
+--------------------------------------------
+HostNestNum = 10, P_a = 0.25
+--------------------------------------------
+Best OFV : 0.7999999999999999	CPU Time : 0.28 seconds (Processing time for the best solution)
+Average OFV : 0.800
+Average CPU Time : 0.338

@@ -1,0 +1,15 @@
+-- CL7 result
+--------------------------------------------
+HostNestNum = 7, P_a = 0.25
+--------------------------------------------
+-- 2020-03-24 21:07 result data
+OFV: 3.6799999999999997	/ CPU: 0.917 seconds 	/ department sequence: [7, 3, 6, 5, 2, 4, 1]
+OFV: 3.6799999999999997	/ CPU: 0.449 seconds 	/ department sequence: [7, 3, 6, 5, 2, 4, 1]
+OFV: 3.6799999999999997	/ CPU: 0.490 seconds 	/ department sequence: [7, 3, 6, 5, 2, 4, 1]
+OFV: 3.6799999999999997	/ CPU: 0.342 seconds 	/ department sequence: [7, 3, 6, 5, 2, 4, 1]
+OFV: 3.6799999999999997	/ CPU: 0.316 seconds 	/ department sequence: [7, 3, 6, 5, 2, 4, 1]
+OFV: 3.6799999999999997	/ CPU: 0.369 seconds 	/ department sequence: [7, 3, 6, 5, 2, 4, 1]
+OFV: 3.6799999999999997	/ CPU: 0.328 seconds 	/ department sequence: [7, 3, 6, 5, 2, 4, 1]
+OFV: 3.6799999999999997	/ CPU: 0.300 seconds 	/ department sequence: [7, 3, 6, 5, 2, 4, 1]
+OFV: 3.6799999999999997	/ CPU: 0.314 seconds 	/ department sequence: [7, 3, 6, 5, 2, 4, 1]
+OFV: 3.6799999999999997	/ CPU: 0.260 seconds 	/ department sequence: [7, 3, 6, 5, 2, 4, 1]

@@ -1,0 +1,15 @@
+CL7 summary
+
+-- 2020-03-24 21:07 result data
+--------------------------------------------
+HostNestNum = 7, P_a = 0.25
+--------------------------------------------
+Best OFV : 3.6799999999999997	CPU Time : 0.26 seconds (Processing time for the best solution)
+Average OFV : 3.680
+Average CPU Time : 0.409
+--------------------------------------------
+HostNestNum = 14, P_a = 0.25
+--------------------------------------------
+Best OFV : 3.6799999999999997	CPU Time : 0.46 seconds (Processing time for the best solution)
+Average OFV : 3.680
+Average CPU Time : 0.516

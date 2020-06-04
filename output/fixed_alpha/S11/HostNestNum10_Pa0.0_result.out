@@ -1,0 +1,15 @@
+-- S11 result
+--------------------------------------------
+HostNestNum = 10, P_a = 0.0
+--------------------------------------------
+-- 2019-01-08 09:13 result data
+OFV: 6933.5	/ CPU: 1.060 seconds 	/ department sequence: [11, 8, 5, 6, 3, 4, 10, 1, 2, 7, 9]
+OFV: 6933.5	/ CPU: 0.686 seconds 	/ department sequence: [9, 7, 2, 1, 10, 4, 3, 6, 5, 8, 11]
+OFV: 6933.5	/ CPU: 0.696 seconds 	/ department sequence: [9, 7, 2, 1, 10, 4, 3, 6, 5, 8, 11]
+OFV: 6933.5	/ CPU: 0.672 seconds 	/ department sequence: [9, 7, 2, 1, 10, 4, 3, 6, 5, 8, 11]
+OFV: 7265.5	/ CPU: 0.687 seconds 	/ department sequence: [11, 6, 2, 5, 1, 7, 10, 4, 3, 8, 9]
+OFV: 7265.5	/ CPU: 0.689 seconds 	/ department sequence: [11, 6, 2, 5, 1, 7, 10, 4, 3, 8, 9]
+OFV: 7265.5	/ CPU: 0.782 seconds 	/ department sequence: [11, 6, 2, 5, 1, 7, 10, 4, 3, 8, 9]
+OFV: 6933.5	/ CPU: 0.696 seconds 	/ department sequence: [9, 7, 2, 1, 10, 4, 3, 6, 5, 8, 11]
+OFV: 6933.5	/ CPU: 0.681 seconds 	/ department sequence: [9, 7, 2, 1, 10, 4, 3, 6, 5, 8, 11]
+OFV: 7265.5	/ CPU: 0.680 seconds 	/ department sequence: [11, 6, 2, 5, 1, 7, 10, 4, 3, 8, 9]

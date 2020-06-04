@@ -1,0 +1,15 @@
+-- P15 result
+--------------------------------------------
+HostNestNum = 10, P_a = 0.1
+--------------------------------------------
+-- 2019-01-08 11:03 result data
+OFV: 6305.0	/ CPU: 1.518 seconds 	/ department sequence: [10, 15, 6, 5, 3, 4, 14, 12, 7, 13, 2, 8, 11, 9, 1]
+OFV: 6592.0	/ CPU: 1.586 seconds 	/ department sequence: [10, 15, 6, 5, 3, 9, 12, 8, 11, 14, 4, 7, 13, 2, 1]
+OFV: 6559.0	/ CPU: 1.422 seconds 	/ department sequence: [10, 15, 6, 5, 9, 12, 11, 8, 7, 3, 14, 4, 13, 2, 1]
+OFV: 6305.0	/ CPU: 1.459 seconds 	/ department sequence: [10, 15, 6, 5, 3, 4, 14, 12, 7, 8, 11, 2, 13, 9, 1]
+OFV: 6568.0	/ CPU: 1.393 seconds 	/ department sequence: [1, 3, 4, 2, 13, 14, 7, 8, 11, 12, 9, 5, 6, 15, 10]
+OFV: 6305.0	/ CPU: 1.804 seconds 	/ department sequence: [10, 15, 6, 5, 3, 4, 14, 12, 7, 8, 11, 9, 13, 2, 1]
+OFV: 6534.0	/ CPU: 1.423 seconds 	/ department sequence: [1, 10, 15, 6, 3, 4, 14, 2, 13, 5, 7, 12, 8, 11, 9]
+OFV: 6305.0	/ CPU: 1.462 seconds 	/ department sequence: [1, 2, 13, 9, 11, 8, 7, 12, 14, 4, 3, 5, 6, 15, 10]
+OFV: 6305.0	/ CPU: 1.421 seconds 	/ department sequence: [1, 2, 13, 9, 11, 8, 7, 12, 14, 4, 3, 5, 6, 15, 10]
+OFV: 6568.0	/ CPU: 1.431 seconds 	/ department sequence: [1, 3, 4, 2, 13, 14, 7, 8, 11, 12, 9, 5, 6, 15, 10]
