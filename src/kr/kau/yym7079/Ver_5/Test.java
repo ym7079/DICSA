@@ -22,7 +22,7 @@ class Test {
             BufferedReader br = new BufferedReader(new FileReader(probTypeFile)); // FileReader(): 파일 읽어오기
             String[] strings = br.readLine().split(",");
 
-            String INSTANCE_NAME = ""
+            String INSTANCE_NAME = "";
             for (String probName : strings) {
                 if (probName.contains(INSTANCE_NAME)) {
 
