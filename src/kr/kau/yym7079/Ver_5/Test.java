@@ -23,23 +23,20 @@ class Test {
             String[] strings = br.readLine().split(",");
 
             String INSTANCE_NAME = "Small";
+            if (probType == "DRClassical") probType = "";
             for (String probName : strings) {
-                probType = "";
+                if (probName.contains(INSTANCE_NAME)) {
+                    probType = INSTANCE_NAME;
+                }
                 String pathName = "dataset/Parameters/"+probType+"/";
                 String fileDir = pathName;
                 File directory = new File(fileDir);
-                if (probName.contains(INSTANCE_NAME)) {
-                    probType = INSTANCE_NAME;
-                    pathName = "dataset/Parameters/"+probType+"/";
-                    fileDir = pathName;
-                    directory = new File(fileDir);
-                    directory.mkdirs();
-                }
+                if(!directory.exists()) directory.mkdirs();
                 File paramFile = new File(pathName + probName + ".parameter");
+                if(paramFile.exists()) continue;
                 FileWriter fw = new FileWriter(paramFile, false);
-                fw.write("10,15,30,60,90\n");// number of host nests (or the population size n)
-                fw.write("0.0,0.1,0.2,0.25,0.35\n"); // probability Pa
-                fw.write("0.01,0.05,0.1,0.12");// alpha value(α)
+                fw.write("10\n");// number of host nests (or the population size n)
+                fw.write("0.0,0.2,0.25,0.35\n"); // probability Pa
                 fw.close();
             }
 
