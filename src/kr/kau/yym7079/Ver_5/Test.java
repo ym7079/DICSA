@@ -15,7 +15,7 @@ class Test {
     static final double SIGMA_U = Math.pow(((gamma(1.0+ LAMBDA) * Math.sin((Math.PI* LAMBDA)/2.0)) / (gamma((1.0+ LAMBDA)/2.0) * LAMBDA * Math.pow(2.0,(LAMBDA -1)/2))),(1/ LAMBDA));
     static final double SIGMA_V = 1.0;
     public static void main(String[] args) throws Exception {
-        String probNameFolderDir = "dataset/Problems";
+        /*String probNameFolderDir = "dataset/Problems";
         String probTypes[] = {"DRClassical","Am"};
         for (String probType : probTypes) {
             File probTypeFile = new File(probNameFolderDir+"/prob"+probType);
@@ -40,7 +40,7 @@ class Test {
             }
 
 
-        }
+        }*/
         /*int numDepart = 16;
         String probName = "P"+numDepart+"b";
         String fileDir = "dataset/Instance_Data/"+probName;
