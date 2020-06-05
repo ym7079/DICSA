@@ -23,11 +23,10 @@ class Test {
             String[] strings = br.readLine().split(",");
 
             String INSTANCE_NAME = "Small";
-            if (probType == "DRClassical") probType = "";
             for (String probName : strings) {
                 if (probName.contains(INSTANCE_NAME)) {
                     probType = INSTANCE_NAME;
-                }
+                }else if (probType == "DRClassical") probType = "";
                 String pathName = "dataset/Parameters/"+probType+"/";
                 String fileDir = pathName;
                 File directory = new File(fileDir);
