@@ -17,10 +17,10 @@ class RK_Main {
     public static LinkedList<Solution> bestParamNest;
 ////instance 관련 parameter
     private static final String LAYOUT_PROB_TYPE = "DR";
-    private static final String PROB_TYPE = "Classical"; //instance 문제 유형
+    private static final String PROB_TYPE = "HA"; //instance 문제 유형
     private static final boolean IS_CLASSICAL = (PROB_TYPE == "Classical");
-    private static final String INSTANCE_NAME = "60-1"; //instance 문제 이름
-    private static final double OPTIMAL_OFV = 739233.0;
+    private static final String INSTANCE_NAME = "5"; //instance 문제 이름
+    private static final double OPTIMAL_OFV = 52.5;
 ////Dummy 관련 parameter
     private static final boolean IS_DUMMY = false; // dummy를 만들지 여부
     private static final int NUM_DUMMY = 10; // dummy department 수
@@ -39,8 +39,9 @@ class RK_Main {
         //int configNum; // configuration (= parameter set) number
 
         ArrayList<String> probNameSet = new ArrayList<>();
-        ArrayList<Integer> HostNestNum_set = new ArrayList<>(); // number of host nests (or the population size n)
-        ArrayList<Double> ProbA_set = new ArrayList<>(); // probability Pa
+        ArrayList<Integer> hostNestNumSet = new ArrayList<>(); // number of host nests (or the population size n)
+        ArrayList<Double> probASet = new ArrayList<>(); // probability Pa
+        ArrayList<Double> probCSet = new ArrayList<>(); // probability Pc
 
         LinkedList<Solution> bestSolution = new LinkedList<>();
 
@@ -57,24 +58,29 @@ class RK_Main {
                 out.println("############################");
                 out.println("Problem Name: " + probName);
                 out.println("############################");
+
             //set instance data
                 ProbDataSet.init(probName, IS_DUMMY);
                 Solution.setProblemData();
+                Generator.setProblemData();
             //set LP model
                 Cplex LPModel = new Cplex(ProbDataSet.numDepart,ProbDataSet.flow,ProbDataSet.length,ProbDataSet.totalLength);
                 LPModel.setInitDRLPModel();
                 Solution.setModel(LPModel);
             //read Cuckoo search algorithm parameters
-                readParameterSet(probName, HostNestNum_set, ProbA_set, IS_CLASSICAL);
+                readParameterSet(probName, hostNestNumSet, probASet, probCSet, IS_CLASSICAL);
 
                 bestParamNest = new LinkedList<>();
 
-                for (int HostNestNum : HostNestNum_set) {
-                    for (double Pa : ProbA_set) {
-                        if(Pa == 0.2||Pa == 0.25/*||Pa ==0.35*/) {
-                            out.println("population size: " + HostNestNum + ",probability a: " + Pa);
-                            summary.writeln_parameters(HostNestNum, Pa);
-                            CS_Algorithm(summary, HostNestNum, Pa, ALPHA);
+                for (int HostNestNum : hostNestNumSet) {
+                    for (double Pa : probASet) {
+                        for(double Pc: probCSet) {
+                            if (Pa == 0.0 && Pc != 0.0) continue;
+                            if (Pa == 0.0 || Pa == 0.25/*||Pa ==0.35*/) {
+                                out.println("population size: " + HostNestNum + ",probability a: " + Pa + ",probability c: " + Pc +"-------------------------");
+                                summary.writeln_parameters(HostNestNum, Pa);
+                                CS_Algorithm(summary, HostNestNum, Pa, Pc, ALPHA);
+                            }
                         }
                     }
                 }
@@ -106,7 +112,9 @@ class RK_Main {
     }
     /**Read the Name of Problem Instance or the Value of Cuckoo Search Algorithm **/
     private static void readProbNameSet(ArrayList<String>probName_set) throws Exception {
-        File file = new File("dataset/Problems/prob"+ LAYOUT_PROB_TYPE + PROB_TYPE);
+        File file;
+        if(PROB_TYPE == "Classical") file = new File("dataset/Problems/prob"+ LAYOUT_PROB_TYPE + PROB_TYPE);
+        else file = new File("dataset/Problems/prob"+ PROB_TYPE);
         try{
             BufferedReader br = new BufferedReader(new FileReader(file)); // FileReader(): 파일 읽어오기
             String[] strings = br.readLine().split(",");//br의 내용을 ,에 따라 나눠 strs 문자열 배열에 저장
@@ -115,11 +123,14 @@ class RK_Main {
             e.printStackTrace();
         }
     }
-    private static void readParameterSet(String probName, ArrayList<Integer> HostNestNum_set, ArrayList<Double> ProbA_set,boolean isClassical){
-        if(isClassical)readParameterSet(probName,HostNestNum_set,ProbA_set,"");
-        else readParameterSet(probName,HostNestNum_set,ProbA_set, PROB_TYPE);
+    private static void readParameterSet(String probName, ArrayList<Integer> HostNestNum_set, ArrayList<Double> ProbA_set, ArrayList<Double> ProbC_set, boolean isClassical){
+        if(isClassical){
+            if (probName.contains("Small"))readParameterSet(probName,HostNestNum_set,ProbA_set,ProbC_set,"Small");
+            else readParameterSet(probName,HostNestNum_set,ProbA_set,ProbC_set,"");
+        }
+        else readParameterSet(probName,HostNestNum_set,ProbA_set,ProbC_set, PROB_TYPE);
     }
-    private static void readParameterSet(String probName, ArrayList<Integer> HostNestNum_set, ArrayList<Double> ProbA_set,String probType) {
+    private static void readParameterSet(String probName, ArrayList<Integer> HostNestNum_set, ArrayList<Double> ProbA_set, ArrayList<Double> ProbC_set,String probType) {
         /** File Usage
          *  file path -> dataset/Parameters/
          *  file name -> %probName%.parameter
@@ -140,6 +151,10 @@ class RK_Main {
             for (String str : strs) {
                 ProbA_set.add(Double.parseDouble(str));
             }
+            strs = br.readLine().split(",");
+            for (String str : strs) {
+                ProbC_set.add(Double.parseDouble(str));
+            }
         }catch(Exception e) {
             e.printStackTrace();
         }
@@ -151,11 +166,12 @@ class RK_Main {
     }
     public static double getLengthDummy() { return LENGTH_DUMMY; }
     /** The Body of Random-Key Discrete Cuckoo Search Algorithm **/
-    private static void CS_Algorithm(OutputWriter summary, int HostNestNum, double Pa, double alpha)throws Exception{
+    private static void CS_Algorithm(OutputWriter summary, int HostNestNum, double Pa, double Pc, double alpha)throws Exception{
         Experiment exp;
         OutputWriter result;
-        exp = new Experiment(HostNestNum,Pa,alpha);
+        exp = new Experiment(HostNestNum,Pa,Pc,alpha);
         result = new OutputWriter(HostNestNum,Pa);
+        Solution.isIterOver1500 = false;
         double bestOFV = 0;
 
         LinkedList<Solution_SR> Nest_Set = new LinkedList<>();
@@ -168,8 +184,9 @@ class RK_Main {
             //Cuckoo Search Algorithm part =================================================================================================
           /**The first phase:  Random initial solutions */
             //Generating Initial Population of n host nests X_i(초기 해집단 생성)
-            //exp.initHostNest(layoutProbType);
-            exp.initHostNest();
+            exp.initHostNest(LAYOUT_PROB_TYPE);
+            //exp.initHostNest();
+
             Solution_SR currBestNest_SR;
             Solution_DR currBestNest_DR;
             Solution currBestSolution;
@@ -184,10 +201,11 @@ class RK_Main {
                 if(numIter % 100 == 0 && numIter >= 100){
                     if(LAYOUT_PROB_TYPE =="SR")exp.initHostNest(exp.currBestCuckoo_SR);
                     else if(LAYOUT_PROB_TYPE =="DR")exp.initHostNest(exp.currBestCuckoo_DR);
+                    if (numIter >= 1500) Solution.isIterOver1500 = true;
                 }
               /** The second phase: Start Searching with a fraction Pc of Smart Cuckoos **/
               //smart cuckoos begin by exploring new areas from the current solutions ==> diversification
-                exp.searchWithSmartCuckoos(LAYOUT_PROB_TYPE);
+                if(Pc != 0.0) exp.searchWithSmartCuckoos(LAYOUT_PROB_TYPE);
                 /*Collections.sort(exp.HostNest_SR);
                 bestIdx = 0;*/
               /***The third phase: Employ one cuckoo to search for a new good solution,starting from the best solution of the population
@@ -214,6 +232,7 @@ class RK_Main {
             out.println("Total Process Time : "+CPU_time+"sec");
             out.println("check Iteration : "+checkIter);
             out.println("temp Iteration : "+tempIter);
+            tempIter = 0;
             if(LAYOUT_PROB_TYPE =="SR"){
                 //Best OFV update
                 currBestNest_SR = exp.currBestCuckoo_SR;
@@ -290,9 +309,10 @@ abstract class Solution implements Comparable<Solution>, Cloneable {
     //LinkedList<Depart> departs;
     Depart[] departs;
     double OFV;
-    static double bestOFV = Double.MAX_VALUE;
+    static double bestOFV;
     double CPUTime;
     int iterNum;
+    public static boolean isIterOver1500;
     // Instance Solution Data
     private static int numDepart;
     static double[] length;
@@ -317,6 +337,7 @@ abstract class Solution implements Comparable<Solution>, Cloneable {
         numDepart = ProbDataSet.numDepart;
         length = ProbDataSet.length;
         flow = ProbDataSet.flow;
+        bestOFV = Double.MAX_VALUE;
     }
     static void setModel(Cplex LPModel){
         model = LPModel;
@@ -367,19 +388,15 @@ abstract class Solution implements Comparable<Solution>, Cloneable {
     }
 //---------------------------------------------------------
     public int compareTo(Solution s) {
-    if(this.OFV > s.OFV){
-        return 1;
-    }else if(this.OFV < s.OFV){
-        return -1;
-    }else{
-        return 0;
-    }
+        return Double.compare(this.OFV, s.OFV);
 }//compareTo()
     public Object clone() {
         Object obj = null;
         try{
             obj = super.clone();
-        }catch (CloneNotSupportedException e){}
+        }catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
         return obj;
     }
 
@@ -448,19 +465,24 @@ class Solution_DR extends Solution {
         representSol();
         upDown = true;
         setDepartCentroid(upDown);
-        evaluateSol();
-        if(this.OFV <= bestOFV*1.2) {
+        
+        if(isIterOver1500) {
             evaluateSol(model);
         }
+        else evaluateSol();
     }
     Solution_DR(LinkedList<Integer> departSeq) throws Exception {
         representSol(departSeq);
         upDown = true;
         setDepartCentroid(upDown);
         evaluateSol();
-        if(this.OFV <= bestOFV*1.2) {
+        /*if(this.OFV <= bestOFV*1.2) {
+            evaluateSol(model);
+        }*/
+        if(isIterOver1500) {
             evaluateSol(model);
         }
+        else evaluateSol();
     }
     Solution_DR(LinkedList<Integer> departSeq, LinkedList<Double> keySeq) throws Exception {
         representSol(departSeq);
@@ -468,9 +490,13 @@ class Solution_DR extends Solution {
         upDown = true;
         setDepartCentroid(upDown);
         evaluateSol();
-        if(this.OFV <= bestOFV*1.2) {
+        /*if(this.OFV <= bestOFV*1.2) {
+            evaluateSol(model);
+        }*/
+        if(isIterOver1500) {
             evaluateSol(model);
         }
+        else evaluateSol();
     }
 // --------------------------------------------------------
 //	Method : Double Row FLP Solution 생성
@@ -514,14 +540,7 @@ class Solution_DR extends Solution {
         }
     }
     private void evaluateSol(Cplex model) throws Exception {
-        long beforeTime = System.currentTimeMillis();
-
         model.solveLPModel(upperDepartSeq,lowerDepartSeq);
-
-        long afterTime = System.currentTimeMillis();
-        long secDiffTime = (afterTime - beforeTime);
-        out.println(secDiffTime);
-
         RK_Main.tempIter++;
         this.OFV = model.objValue;
         if(this.OFV < bestOFV) bestOFV = this.OFV;

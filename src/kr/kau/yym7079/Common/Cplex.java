@@ -253,7 +253,6 @@ public class Cplex {
     }
     public void solveLPModel(ArrayList <Integer> upperDepartSeq, ArrayList<Integer> lowerDepartSeq) throws IloException {
         // fix alpha <- arrangement
-        long beforeTime = System.currentTimeMillis();
         int left; int right;
 
         int sizeOfUpperSeq = upperDepartSeq.size();
@@ -295,9 +294,6 @@ public class Cplex {
             //activate overlapping prevention constraints
             cplex.remove(overlappingPrevention[left][right]);
         }
-        long afterTime = System.currentTimeMillis();
-        long secDiffTime = (afterTime - beforeTime);
-        out.println(secDiffTime);
     }
     public void solveLPModel(boolean[] gammaSeq,boolean[][] alphaSeq) throws IloException {
         // fix alpha <- arrangement

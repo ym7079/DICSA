@@ -37,6 +37,7 @@ class OutputWriter {
     }
     private void summaryfw(String probName) throws Exception {
         OutputWriter.instanceName = probName;
+        if(instanceName.contains("Small"))dirName = "output/fixed_alpha/Small/";
         String dirName = OutputWriter.dirName+probName+"/";
 
         File summaryFile = new File(dirName+"[Summary].out");

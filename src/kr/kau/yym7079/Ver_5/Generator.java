@@ -2,9 +2,19 @@ package kr.kau.yym7079.Ver_5;
 
 import java.util.*;
 
+import static java.lang.System.out;
+
 class Generator {
-    final static private int numDepart = ProbDataSet.numDepart;
-    final static public LinkedList<Double> NORMALIZED_KEY_SEQ = getNormalizedKeySeq(numDepart);
+    static private int numDepart;
+    static private LinkedList<Double> normalizedKeySeq;
+    static public ArrayList<int[]> poolOfInsertingOperations;
+
+    static public void setProblemData(){
+        numDepart = ProbDataSet.numDepart;
+        normalizedKeySeq = getNormalizedKeySeq(numDepart);
+        //poolOfInsertingOperations = getPoolOfInsertingOperations(numDepart);
+    }
+
     static private LinkedList<Double> getNormalizedKeySeq(int numDepart){
         LinkedList<Double> keySeq = new LinkedList<>();
 
@@ -17,8 +27,6 @@ class Generator {
         }
         return keySeq;
     }
-
-    final static public ArrayList<int[]> poolOfInsertingOperations = getPoolOfInsertingOperations(numDepart);
     static private ArrayList<int[]> getPoolOfInsertingOperations(int numDepart){
         ArrayList<int[]> result = new ArrayList<>();
         for(int i=0; i<numDepart-1; i++){
@@ -66,6 +74,7 @@ class Generator {
         }
         return result;
     }
+//Sequence Update Methods
     public static void keySeqUpdate(LinkedList<Double>keySeq,LinkedList<Integer>departSeq){
         LinkedList<Double> tmpSeq = (LinkedList<Double>) keySeq.clone();
 
@@ -74,15 +83,15 @@ class Generator {
         }
     }
     public LinkedList<Double> keySeqUpdate(LinkedList<Integer>departSeq){
-        LinkedList<Double> keySeq = new LinkedList<>(NORMALIZED_KEY_SEQ);
-        LinkedList<Double> tmpSeq = new LinkedList<>();
-        tmpSeq.addAll(keySeq);
+        LinkedList<Double> keySeq = new LinkedList<>(normalizedKeySeq);
+        LinkedList<Double> tmpSeq = new LinkedList<>(keySeq);
 
         for(int i=0; i<keySeq.size(); i++){
             keySeq.set(departSeq.get(i)-1,tmpSeq.get(i));
         }
         return keySeq;
     }
+
     public LinkedList<Integer> departSeqUpdate(LinkedList<Double>keySeq){
         LinkedList<Integer> result = new LinkedList<>();
 
@@ -95,7 +104,7 @@ class Generator {
         }
         return result;
     }
-
+//Random Permute Methods
     public static LinkedList<Integer> randomPermute() {
         LinkedList<Integer> result = new LinkedList<>();
         for(int i=1; i<=numDepart; i++) {
@@ -121,15 +130,16 @@ class Generator {
 
         return result;
     }
+
     public static LinkedList<Integer> randomKeyPermute(LinkedList<Double>keySeq){
 
-        keySeq.addAll(NORMALIZED_KEY_SEQ);
+        keySeq.addAll(normalizedKeySeq);
         LinkedList<Integer> result = randomPermute();
         keySeqUpdate(keySeq,result);
 
         return result;
     }
-
+//Operator Methods
     public void inverseMoveOperator(LinkedList<Double> keySeq) throws Exception {
         List<Double> subSeq;
 
@@ -218,14 +228,13 @@ class Generator {
 
         int removingIdx;
         int insertingIdx;
-        while(true){
+        do {
             removingIdx = new Random().nextInt(departSeq.size());
             insertingIdx = new Random().nextInt(departSeq.size());
             while (removingIdx == insertingIdx) {
                 insertingIdx = new Random().nextInt(departSeq.size());
             }
-            if(Math.abs(removingIdx-insertingIdx) > numDepart/2)break;
-        }
+        } while (Math.abs(removingIdx - insertingIdx) <= numDepart / 2);
         int tempValue = departSeq.get(removingIdx);
         result.remove(removingIdx);
         result.add(insertingIdx,tempValue);

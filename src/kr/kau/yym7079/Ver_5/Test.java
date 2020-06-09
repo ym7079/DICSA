@@ -15,8 +15,31 @@ class Test {
     static final double SIGMA_U = Math.pow(((gamma(1.0+ LAMBDA) * Math.sin((Math.PI* LAMBDA)/2.0)) / (gamma((1.0+ LAMBDA)/2.0) * LAMBDA * Math.pow(2.0,(LAMBDA -1)/2))),(1/ LAMBDA));
     static final double SIGMA_V = 1.0;
     public static void main(String[] args) throws Exception {
-        /*String probNameFolderDir = "dataset/Problems";
         String probTypes[] = {"DRClassical","Am"};
+        String probNameFolderDir = "dataset/Problems";
+        for (String probType : probTypes) {
+            File probTypeFile = new File(probNameFolderDir + "/prob" + probType);
+            BufferedReader br = new BufferedReader(new FileReader(probTypeFile)); // FileReader(): 파일 읽어오기
+            String[] strings = br.readLine().split(",");
+
+            String INSTANCE_NAME = "Small";
+            for (String probName : strings) {
+                String outputDir = "output/fixed_alpha/"+probType+"/" + probName;
+
+                if (probName.contains(INSTANCE_NAME)) {
+                    outputDir = "output/fixed_alpha/"+INSTANCE_NAME+"/" + probName;
+                }else if (probType == "DRClassical") probType = "";
+
+
+                File outputDirectory = new File(outputDir);
+                if(outputDirectory.exists()) continue;
+                outputDirectory.mkdirs();
+
+            }
+        }
+
+
+        /*
         for (String probType : probTypes) {
             File probTypeFile = new File(probNameFolderDir+"/prob"+probType);
             BufferedReader br = new BufferedReader(new FileReader(probTypeFile)); // FileReader(): 파일 읽어오기

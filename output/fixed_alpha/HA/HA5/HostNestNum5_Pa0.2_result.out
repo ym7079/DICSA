@@ -15,3 +15,13 @@ HostNestNum = 5, P_a = 0.2
 -- 2020-03-23 04:05 result data
 OFV: 52.5	/ CPU: 0.525 seconds 	/ department sequence: [4, 1, 3, 5, 2]
 OFV: 52.5	/ CPU: 0.282 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+-- HA5 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.2
+--------------------------------------------
+-- 2020-06-09 16:54 result data
+OFV: 52.5	/ CPU: 4.402 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 9.617 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 9.303 seconds 	/ department sequence: [1, 2, 5, 3, 4]
+OFV: 52.5	/ CPU: 8.065 seconds 	/ department sequence: [1, 2, 5, 3, 4]
+OFV: 52.5	/ CPU: 8.120 seconds 	/ department sequence: [1, 2, 5, 3, 4]

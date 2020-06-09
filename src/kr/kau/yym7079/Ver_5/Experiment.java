@@ -1,10 +1,9 @@
 package kr.kau.yym7079.Ver_5;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.Random;
+import java.util.*;
 
+import static java.lang.System.console;
+import static java.lang.System.out;
 import static org.apache.commons.math3.special.Gamma.gamma;
 
 class Experiment {
@@ -14,8 +13,10 @@ class Experiment {
     private final int numDepart;
     private final int HostNestNum;
     private final double Pa;
+    private final double Pc;
     private final double alpha;
 
+    Solution[] hostNest;
     LinkedList<Solution> HostNest = new LinkedList<>();
     ArrayList<Solution_SR> HostNest_SR = new ArrayList<>();
     ArrayList<Solution_DR> HostNest_DR = new ArrayList<>();
@@ -31,15 +32,23 @@ class Experiment {
     Solution_DR newCuckoo_DR;
     //####################################################################################################################################
 // 생성자
-    Experiment(int HostNestNum, double Pa, double alpha){
+    Experiment(int HostNestNum, double Pa, double Pc, double alpha){
         this.numDepart = ProbDataSet.numDepart;
         this.HostNestNum = HostNestNum;
         this.Pa = Pa;
+        this.Pc = Pc;
         this.alpha = alpha/(numDepart);
     }
     //####################################################################################################################################
 // Method : The 1st phase -> Generate initial population of n host nests
     void initHostNest() throws Exception { // 완전 랜덤한 초기해 생성
+        hostNest = new Solution[HostNestNum];
+        for (int i = 0; i < HostNestNum; i++) {
+            hostNest[i] = new Solution_DR();
+        }
+        Arrays.sort(hostNest);
+        bestIdx = 0;
+        currBestSolution = hostNest[bestIdx];
 
         HostNest_DR.clear();
         for(int i=0; i< HostNestNum; i++){
@@ -48,6 +57,14 @@ class Experiment {
         Collections.sort(HostNest_DR);
         bestIdx = 0;
         currBestCuckoo_DR = HostNest_DR.get(bestIdx);
+
+        HostNest.clear();
+        for (int i = 0; i < HostNestNum; i++) {
+            HostNest.add(new Solution_DR());
+        }
+        Collections.sort(HostNest_DR);
+        bestIdx = 0;
+        currBestSolution = HostNest.get(bestIdx);
     }
     void initHostNest(String layoutProbType) throws Exception {
         LinkedList<Integer> Π = g.generateInitSeedPermutation(); // An initial seed permutation
@@ -157,13 +174,12 @@ class Experiment {
         bestIdx = 0;
     }
     void initHostNest(Solution_DR currBestCuckoo) throws Exception {
-        LinkedList<Integer> Π = currBestCuckoo.departSeq; // An initial seed permutation
+        LinkedList<Integer> Π = new LinkedList<>(currBestCuckoo.departSeq); // An initial seed permutation
         LinkedList<Integer> tmpDepartSeq;
 
         // HostNest의 초기화
         HostNest_DR.clear();
-        //HostNest_SR.add(new Solution(Π,g.keySeqUpdate(Π)));
-        for(int i=0; i<HostNestNum/2; i++){
+       /* for(int i=0; i<HostNestNum/2; i++){
             tmpDepartSeq = new LinkedList<>(Π);
             for(int j=0; j<=numDepart/2; j++){
                 double rn = Math.random();
@@ -172,29 +188,61 @@ class Experiment {
                 }
             }
             HostNest_DR.add(new Solution_DR(tmpDepartSeq,g.keySeqUpdate(tmpDepartSeq)));
-        }
-
-        /*Π = g.generateInitSeedPermutation();
-        HostNest_DR.add(new Solution_DR(Π,g.keySeqUpdate(Π)));
-        for(int i=(HostNestNum/2)+1; i<HostNestNum; i++){
-            tmpDepartSeq = (LinkedList<Integer>) Π.clone();
-            for(int j=0; j<=numDepart/2; j++){
+        }*/
+        ArrayList<Integer> tmpOverlapSet = new ArrayList<>();
+        for(int i=0; i<HostNestNum/2; i++){
+            tmpDepartSeq = new LinkedList<>(Π);
+            for (int j=0; j<HostNestNum/2; j++) {
                 double rn = Math.random();
                 if(rn <= 0.5){
-                    Collections.swap(tmpDepartSeq,j,numDepart-j-1);
+                    //Collections.swap(tmpDepartSeq,j,numDepart-j-1);
+                    //tmpDepartSeq = g.insertMoveOperator(tmpDepartSeq);
+                    int tmp=0;
+                    int removingIdx;
+                    int insertingIdx;
+                    rn = Math.random();
+                    if(rn <= 0.5){
+                        removingIdx = j;
+                        insertingIdx = numDepart-j-1;
+                    }
+                    else{
+                        removingIdx = numDepart-j-1;
+                        insertingIdx = j;
+                    }
+                    tmp += 100*removingIdx + insertingIdx;
+                    boolean isContained = tmpOverlapSet.contains(tmp);
+                    if(isContained) continue;
+                    g.insertMoveOperator(tmpDepartSeq,removingIdx,insertingIdx);
+                    tmpOverlapSet.add(tmp);
+                    break;
                 }
             }
             HostNest_DR.add(new Solution_DR(tmpDepartSeq,g.keySeqUpdate(tmpDepartSeq)));
-        }*/
-        for(int i=(HostNestNum/2); i<HostNestNum; i++){
-            HostNest_DR.add(new Solution_DR());
         }
+
+        Π = g.generateInitSeedPermutation();
+        HostNest_DR.add(new Solution_DR(Π,g.keySeqUpdate(Π)));
+        for(int i=(HostNestNum/2)+1; i<HostNestNum; i++){
+            tmpDepartSeq =  new LinkedList<>(Π);
+            for(int j=0; j<=numDepart/2; j++){
+                double rn = Math.random();
+                if(rn <= 0.5){
+                    //Collections.swap(tmpDepartSeq,j,numDepart-j-1);
+                    if(new Random().nextDouble() <= 0.5){
+                        g.insertMoveOperator(tmpDepartSeq,j,numDepart-j-1);
+                    }
+                    else{
+                        g.insertMoveOperator(tmpDepartSeq,numDepart-j-1,j);
+                    }
+                }
+            }
+            HostNest_DR.add(new Solution_DR(tmpDepartSeq,g.keySeqUpdate(tmpDepartSeq)));
+        }
+        /*for(int i=(HostNestNum/2); i<HostNestNum; i++){
+            HostNest_DR.add(new Solution_DR());
+        }*/
         Collections.sort(HostNest_DR);
         bestIdx = 0;
-    }
-    void initHostNEst(Solution currBestCuckoo) throws Exception {
-        LinkedList<Integer> Π = currBestCuckoo.departSeq; // An initial seed permutation
-
     }
     //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // Method : The 2nd phase -> Triggering smart cuckoos
@@ -225,8 +273,8 @@ class Experiment {
                         bestIdx = j;//--> population 에서 ofv 가 가장 좋은 solution 보다 더 좋으면
                         if (newCuckoo_SR.compareTo(currBestCuckoo_SR) <= -1) {
                             currBestCuckoo_SR = newCuckoo_SR;
-                            System.out.print(currBestCuckoo_SR.departSeq+"\t");
-                            System.out.println("best OFV update_s : "+ currBestCuckoo_SR.OFV+"\tIteration: "+ RK_Main.numIter);
+                            out.print(currBestCuckoo_SR.departSeq+"\t");
+                            out.println("best OFV update_s : "+ currBestCuckoo_SR.OFV+"\tIteration: "+ RK_Main.numIter);
                             currBestCuckoo_SR.iterNum = RK_Main.numIter;
                             RK_Main.numIter = 0;
                         }
@@ -238,7 +286,7 @@ class Experiment {
         }
     }
     void searchWithSmartCuckoos_DR() throws Exception {
-        int numSmartCuckoo = (int)Math.round(0.6*HostNestNum);
+        int numSmartCuckoo = (int)Math.round(Pc*HostNestNum);
         int i = 1;
         int[] smartCuckooIndex = g.randomPermute(numSmartCuckoo,HostNestNum,bestIdx);
         while (i != numSmartCuckoo) {
@@ -255,9 +303,9 @@ class Experiment {
                     if (newCuckoo_DR.compareTo(HostNest_DR.get(bestIdx)) <= -1) {
                         bestIdx = j;//--> population 에서 ofv 가 가장 좋은 solution 보다 더 좋으면
                         if (newCuckoo_DR.compareTo(currBestCuckoo_DR) <= -1) {
-                            System.out.print(newCuckoo_DR.departSeq + "\t");
+                            out.print(newCuckoo_DR.departSeq + "\t");
                             currBestCuckoo_DR = newCuckoo_DR;
-                            System.out.println("best OFV update_s : " + currBestCuckoo_DR.OFV + "\tIteration: " + RK_Main.numIter);
+                            out.println("best OFV update_s : " + currBestCuckoo_DR.OFV + "\tIteration: " + RK_Main.numIter);
                             currBestCuckoo_DR.iterNum = RK_Main.numIter;
                             RK_Main.numIter = 0;
                         }
@@ -315,9 +363,9 @@ class Experiment {
             if (newCuckoo_SR.compareTo(HostNest_SR.get(bestIdx)) <= -1){
                 bestIdx = j;
                 if (newCuckoo_SR.compareTo(currBestCuckoo_SR) <= -1) {
-                    System.out.print(newCuckoo_SR.departSeq+"\t");
+                    out.print(newCuckoo_SR.departSeq+"\t");
                     currBestCuckoo_SR = new Solution_SR(newCuckoo_SR.departSeq, newCuckoo_SR.keySeq);
-                    System.out.println("best OFV update_b : "+ currBestCuckoo_SR.OFV+"\tIteration: "+ RK_Main.numIter);
+                    out.println("best OFV update_b : "+ currBestCuckoo_SR.OFV+"\tIteration: "+ RK_Main.numIter);
                     currBestCuckoo_SR.iterNum = RK_Main.numIter;
                     RK_Main.numIter = 0;
                 }
@@ -343,9 +391,9 @@ class Experiment {
             if (newCuckoo_DR.compareTo(HostNest_DR.get(bestIdx)) <= -1){
                 bestIdx = j;
                 if (newCuckoo_DR.compareTo(currBestCuckoo_DR) <= -1) {
-                    System.out.print(newCuckoo_DR.departSeq+"\t");
+                    out.print(newCuckoo_DR.departSeq+"\t");
                     currBestCuckoo_DR = (Solution_DR) newCuckoo_DR.clone();
-                    System.out.println("best OFV update_b : "+ currBestCuckoo_DR.OFV+"\tIteration: "+RK_Main.numIter);
+                    out.println("best OFV update_b : "+ currBestCuckoo_DR.OFV+"\tIteration: "+RK_Main.numIter);
                     currBestCuckoo_DR.iterNum = RK_Main.numIter;
                     RK_Main.numIter = 0;
                 }
@@ -372,9 +420,9 @@ class Experiment {
             if (newCuckoo_SR.compareTo(HostNest_SR.get(i)) <= -1){
                 bestIdx = worstIndex;
                 if (newCuckoo_SR.compareTo(currBestCuckoo_SR) <= -1) {
-                    System.out.print(newCuckoo_SR.departSeq+"\t");
+                    out.print(newCuckoo_SR.departSeq+"\t");
                     currBestCuckoo_SR =  (Solution_SR) newCuckoo_SR.clone();
-                    System.out.println("best OFV update_w : "+ currBestCuckoo_SR.OFV+"\tIteration: "+ RK_Main.numIter);
+                    out.println("best OFV update_w : "+ currBestCuckoo_SR.OFV+"\tIteration: "+ RK_Main.numIter);
                     currBestCuckoo_SR.iterNum = RK_Main.numIter;
                     RK_Main.numIter = 0;
                 }
@@ -392,9 +440,9 @@ class Experiment {
             if (newCuckoo_DR.compareTo(HostNest_DR.get(bestIdx)) <= -1){
                 bestIdx = worstIndex;
                 if (newCuckoo_DR.compareTo(currBestCuckoo_DR) <= -1) {
-                    System.out.print(newCuckoo_DR.departSeq+"\t");
+                    out.print(newCuckoo_DR.departSeq+"\t");
                     currBestCuckoo_DR =  (Solution_DR) newCuckoo_DR.clone();
-                    System.out.println("best OFV update_w : "+ currBestCuckoo_DR.OFV+"\tIteration: "+RK_Main.numIter);
+                    out.println("best OFV update_w : "+ currBestCuckoo_DR.OFV+"\tIteration: "+RK_Main.numIter);
                     currBestCuckoo_DR.iterNum = RK_Main.numIter;
                     RK_Main.numIter = 0;
                 }
@@ -459,7 +507,7 @@ class Experiment {
         for(int i = 0; i < rnIntDS; i++){
             double key = tmpKeySeq.get(i);
             double step = stepValue();
-            double stepLength = step* new Random().nextGaussian();;
+            double stepLength = step* new Random().nextGaussian();
             double newKey = key + alpha*stepLength;
             if(newKey > 1){
                 //departSeq update
