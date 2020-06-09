@@ -57,18 +57,20 @@ class Generator {
             tmpLengthSet.set(tmpLengthSet.indexOf(length),0.0);
         }
 
+        int sizeOfNonDecreasingSeq = nonDecreasingSeq.size();
         if(numDepart %2 == 0){//when n is even
-            for(int i=nonDecreasingSeq.size()-1; i>=1; i-=2){
+
+            for(int i=sizeOfNonDecreasingSeq-1; i>=1; i-=2){
                 result.add(nonDecreasingSeq.get(i)+1);
             }
-            for(int i=0; i<nonDecreasingSeq.size(); i+=2){
+            for(int i=0; i<sizeOfNonDecreasingSeq; i+=2){
                 result.add(nonDecreasingSeq.get(i)+1);
             }
         }else{//when n is odd
-            for(int i=nonDecreasingSeq.size()-1; i>=0; i-=2){
+            for(int i=sizeOfNonDecreasingSeq-1; i>=0; i-=2){
                 result.add(nonDecreasingSeq.get(i)+1);
             }
-            for(int i=1; i<nonDecreasingSeq.size(); i+=2){
+            for(int i=1; i<sizeOfNonDecreasingSeq; i+=2){
                 result.add(nonDecreasingSeq.get(i)+1);
             }
         }
@@ -76,9 +78,10 @@ class Generator {
     }
 //Sequence Update Methods
     public static void keySeqUpdate(LinkedList<Double>keySeq,LinkedList<Integer>departSeq){
-        LinkedList<Double> tmpSeq = (LinkedList<Double>) keySeq.clone();
+        LinkedList<Double> tmpSeq = new LinkedList<>(keySeq);
 
-        for(int i=0; i<keySeq.size(); i++){
+        int sizeOfKeySeq = keySeq.size();
+        for(int i=0; i<sizeOfKeySeq; i++){
             keySeq.set(departSeq.get(i)-1,tmpSeq.get(i));
         }
     }
@@ -86,7 +89,8 @@ class Generator {
         LinkedList<Double> keySeq = new LinkedList<>(normalizedKeySeq);
         LinkedList<Double> tmpSeq = new LinkedList<>(keySeq);
 
-        for(int i=0; i<keySeq.size(); i++){
+        int sizeOfKeySeq = keySeq.size();
+        for(int i=0; i<sizeOfKeySeq; i++){
             keySeq.set(departSeq.get(i)-1,tmpSeq.get(i));
         }
         return keySeq;
@@ -173,8 +177,10 @@ class Generator {
         int idx2 = new Random().nextInt(departSeq.size()+1);
         while(idx1 == idx2 || Math.abs(idx1-idx2) == 1) {
             idx2 = new Random().nextInt(departSeq.size()+1);
-            if(idx1 == 0 && idx2 == departSeq.size()) continue;
-            else if (idx1 == departSeq.size() && idx2 == 0) continue;
+            if(idx1 == 0 && idx2 == departSeq.size()) {
+            }
+            else if (idx1 == departSeq.size() && idx2 == 0) {
+            }
         }
         int idxMin = Math.min(idx1,idx2);
         int idxMax = Math.max(idx1,idx2);
