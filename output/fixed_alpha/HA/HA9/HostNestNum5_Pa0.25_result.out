@@ -98,3 +98,43 @@ OFV: 495.5	/ CPU: 4.263 seconds
 department sequence: [9, 10, 4, 6, 1, 5, 8, 2, 3, 7]	upper(t) or lower(f): true	false	false	false	false	true	true	true	true	false	
 OFV: 486.5	/ CPU: 4.346 seconds 
 department sequence: [10, 3, 7, 1, 2, 8, 5, 9, 6, 4]	upper(t) or lower(f): false	true	false	false	true	true	true	true	false	false	
+-- HA9 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-09 19:10 result data
+OFV: 486.5	/ CPU: 3.074 seconds 	/ department sequence: [4, 9, 6, 5, 8, 1, 2, 3, 7]
+OFV: 486.5	/ CPU: 2.278 seconds 	/ department sequence: [9, 4, 6, 1, 5, 8, 2, 7, 3]
+OFV: 486.5	/ CPU: 2.325 seconds 	/ department sequence: [7, 3, 1, 2, 8, 5, 9, 6, 4]
+OFV: 486.5	/ CPU: 2.464 seconds 	/ department sequence: [9, 4, 6, 5, 1, 8, 2, 3, 7]
+OFV: 486.5	/ CPU: 3.188 seconds 	/ department sequence: [7, 3, 1, 2, 8, 5, 9, 6, 4]
+-- HA9 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-09 19:10 result data
+OFV: 486.5	/ CPU: 2.283 seconds 	/ department sequence: [4, 9, 6, 1, 5, 8, 2, 7, 3]
+OFV: 486.5	/ CPU: 2.825 seconds 	/ department sequence: [4, 9, 6, 5, 8, 1, 2, 3, 7]
+OFV: 486.5	/ CPU: 2.676 seconds 	/ department sequence: [9, 4, 6, 1, 5, 8, 2, 7, 3]
+OFV: 486.5	/ CPU: 2.605 seconds 	/ department sequence: [7, 3, 1, 2, 8, 5, 6, 9, 4]
+OFV: 486.5	/ CPU: 3.145 seconds 	/ department sequence: [9, 4, 6, 1, 5, 8, 2, 7, 3]
+-- HA9 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-09 19:10 result data
+OFV: 486.5	/ CPU: 4.462 seconds 	/ department sequence: [3, 7, 1, 2, 8, 5, 9, 6, 4]
+OFV: 486.5	/ CPU: 3.934 seconds 	/ department sequence: [9, 4, 6, 1, 5, 8, 2, 7, 3]
+OFV: 486.5	/ CPU: 5.854 seconds 	/ department sequence: [3, 7, 1, 2, 8, 5, 9, 6, 4]
+OFV: 486.5	/ CPU: 3.704 seconds 	/ department sequence: [4, 9, 6, 1, 5, 8, 2, 7, 3]
+OFV: 486.5	/ CPU: 3.373 seconds 	/ department sequence: [4, 9, 6, 1, 5, 8, 2, 7, 3]
+-- HA9 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-09 19:11 result data
+OFV: 492.5	/ CPU: 0.976 seconds 	/ department sequence: [1, 2, 8, 5, 9, 6, 4, 3, 7]
+OFV: 486.5	/ CPU: 4.222 seconds 	/ department sequence: [9, 4, 6, 1, 5, 8, 2, 7, 3]
+OFV: 486.5	/ CPU: 4.581 seconds 	/ department sequence: [7, 3, 1, 2, 8, 5, 9, 6, 4]
+OFV: 486.5	/ CPU: 4.840 seconds 	/ department sequence: [9, 4, 6, 1, 5, 8, 2, 7, 3]
+OFV: 486.5	/ CPU: 4.770 seconds 	/ department sequence: [3, 7, 1, 2, 8, 5, 9, 6, 4]

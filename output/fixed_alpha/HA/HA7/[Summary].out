@@ -89,3 +89,36 @@ HA7 summary
 --------------------------------------------
 HostNestNum = 5, P_a = 0.2
 --------------------------------------------
+HA7 summary
+
+-- 2020-06-09 18:59 result data
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+Best OFV : 159.0	CPU Time : 0.954 seconds (Processing time for the best solution)
+Average OFV : 159.000
+Average CPU Time : 1.406
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 159.0	CPU Time : 1.493 seconds (Processing time for the best solution)
+Average OFV : 159.000
+Average CPU Time : 1.606
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 159.0	CPU Time : 1.372 seconds (Processing time for the best solution)
+Average OFV : 159.000
+Average CPU Time : 1.564
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 159.0	CPU Time : 2.231 seconds (Processing time for the best solution)
+Average OFV : 159.000
+Average CPU Time : 2.507
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 159.0	CPU Time : 2.926 seconds (Processing time for the best solution)
+Average OFV : 159.000
+Average CPU Time : 3.415

@@ -64,3 +64,19 @@ HostNestNum = 5, P_a = 0.0
 -- 2020-03-08 18:16 result data
 OFV: 195.0	/ CPU: 5.489 seconds 	/ department sequence: [3, 9, 10, 5, 6, 7, 2, 8, 4, 1]	cutting order: 0
 OFV: 193.0	/ CPU: 4.890 seconds 	/ department sequence: [3, 9, 5, 7, 6, 8, 2, 4, 1, 10]	cutting order: 0
+-- HA8 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+-- 2020-06-09 19:08 result data
+OFV: 189.5	/ CPU: 1.450 seconds 	/ department sequence: [5, 3, 7, 8, 6, 2, 1, 4]
+OFV: 189.5	/ CPU: 0.921 seconds 	/ department sequence: [5, 3, 7, 8, 6, 2, 1, 4]
+OFV: 197.0	/ CPU: 1.093 seconds 	/ department sequence: [4, 2, 8, 6, 7, 5, 3, 1]
+OFV: 189.5	/ CPU: 0.763 seconds 	/ department sequence: [5, 3, 7, 8, 6, 2, 1, 4]
+OFV: 189.5	/ CPU: 1.051 seconds 	/ department sequence: [3, 5, 7, 6, 8, 2, 1, 4]
+-- HA8 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+-- 2020-06-09 19:52 result data
+OFV: 189.5	/ CPU: 1.180 seconds 	/ department sequence: [5, 3, 7, 8, 6, 2, 1, 4]

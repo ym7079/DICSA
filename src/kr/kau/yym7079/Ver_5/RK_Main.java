@@ -19,8 +19,8 @@ class RK_Main {
     private static final String LAYOUT_PROB_TYPE = "DR";
     private static final String PROB_TYPE = "HA"; //instance 문제 유형
     private static final boolean IS_CLASSICAL = (PROB_TYPE == "Classical");
-    private static final String INSTANCE_NAME = "5"; //instance 문제 이름
-    private static final double OPTIMAL_OFV = 52.5;
+    private static final String INSTANCE_NAME = "HA13"; //instance 문제 이름
+    private static final double OPTIMAL_OFV = 1021.0;
 ////Dummy 관련 parameter
     private static final boolean IS_DUMMY = false; // dummy를 만들지 여부
     private static final int NUM_DUMMY = 10; // dummy department 수
@@ -28,7 +28,7 @@ class RK_Main {
 //Experiment 관련 parameter
     private static final double ALPHA = 0.3;
 
-    private static final int STOP_REP = 5;
+    private static final int STOP_REP =  10;
     private static final int STOP_ITER =  2000;
     static public int numIter;
     static public int tempIter = 0;
@@ -76,7 +76,7 @@ class RK_Main {
                     for (double Pa : probASet) {
                         for(double Pc: probCSet) {
                             if (Pa == 0.0 && Pc != 0.0) continue;
-                            if (Pa == 0.0 || Pa == 0.25/*||Pa ==0.35*/) {
+                            if (Pa == 0.25 /*|| Pa == 0.25||Pa ==0.35*/) {
                                 out.println("population size: " + HostNestNum + ",probability a: " + Pa + ",probability c: " + Pc +"-------------------------");
                                 summary.writeln_parameters(HostNestNum, Pa);
                                 CS_Algorithm(summary, HostNestNum, Pa, Pc, ALPHA);
@@ -171,7 +171,6 @@ class RK_Main {
         OutputWriter result;
         exp = new Experiment(HostNestNum,Pa,Pc,alpha);
         result = new OutputWriter(HostNestNum,Pa);
-        Solution.isIterOver1500 = false;
         double bestOFV = 0;
 
         LinkedList<Solution_SR> Nest_Set = new LinkedList<>();
@@ -196,6 +195,7 @@ class RK_Main {
             int checkIter = 0;
             long startTime = System.currentTimeMillis();	// algorithm start time
             long startIterTime = 0;
+            Solution.isIterOver1500 = false;
             while (numIter++ < STOP_ITER){
                 checkIter ++;
                 if(numIter % 100 == 0 && numIter >= 100){
@@ -388,15 +388,19 @@ abstract class Solution implements Comparable<Solution>, Cloneable {
     }
 //---------------------------------------------------------
     public int compareTo(Solution s) {
-        return Double.compare(this.OFV, s.OFV);
+    if(this.OFV > s.OFV){
+        return 1;
+    }else if(this.OFV < s.OFV){
+        return -1;
+    }else{
+        return 0;
+    }
 }//compareTo()
     public Object clone() {
         Object obj = null;
         try{
             obj = super.clone();
-        }catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
+        }catch (CloneNotSupportedException e){}
         return obj;
     }
 
@@ -466,10 +470,11 @@ class Solution_DR extends Solution {
         upDown = true;
         setDepartCentroid(upDown);
         
-        if(isIterOver1500) {
+        /*if(isIterOver1500) {
             evaluateSol(model);
         }
-        else evaluateSol();
+        else evaluateSol();*/
+        evaluateSol();
     }
     Solution_DR(LinkedList<Integer> departSeq) throws Exception {
         representSol(departSeq);
@@ -482,7 +487,6 @@ class Solution_DR extends Solution {
         if(isIterOver1500) {
             evaluateSol(model);
         }
-        else evaluateSol();
     }
     Solution_DR(LinkedList<Integer> departSeq, LinkedList<Double> keySeq) throws Exception {
         representSol(departSeq);
@@ -496,7 +500,6 @@ class Solution_DR extends Solution {
         if(isIterOver1500) {
             evaluateSol(model);
         }
-        else evaluateSol();
     }
 // --------------------------------------------------------
 //	Method : Double Row FLP Solution 생성

@@ -1,0 +1,20 @@
+-- HA15 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+-- 2020-06-09 18:30 result data
+OFV: 2758.5	/ CPU: 2.721 seconds 	/ department sequence: [5, 8, 1, 4, 11, 7, 14, 2, 10, 6, 3, 9, 15, 13, 12]
+OFV: 2625.0	/ CPU: 3.772 seconds 	/ department sequence: [12, 13, 1, 3, 6, 10, 11, 7, 4, 2, 9, 5, 14, 8, 15]
+OFV: 2638.5	/ CPU: 1.640 seconds 	/ department sequence: [14, 8, 1, 3, 6, 4, 5, 2, 10, 7, 11, 9, 15, 12, 13]
+OFV: 2730.5	/ CPU: 1.286 seconds 	/ department sequence: [12, 13, 9, 10, 1, 11, 7, 6, 3, 4, 2, 14, 5, 8, 15]
+OFV: 2750.5	/ CPU: 3.073 seconds 	/ department sequence: [12, 13, 9, 10, 6, 3, 11, 2, 7, 5, 4, 1, 14, 15, 8]
+-- HA15 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+-- 2020-06-09 18:30 result data
+OFV: 2646.5	/ CPU: 0.488 seconds 	/ department sequence: [8, 14, 1, 3, 10, 6, 5, 4, 2, 7, 11, 9, 15, 13, 12]
+OFV: 2709.5	/ CPU: 1.452 seconds 	/ department sequence: [14, 15, 8, 4, 5, 2, 1, 6, 3, 11, 7, 10, 9, 13, 12]
+OFV: 2695.5	/ CPU: 1.522 seconds 	/ department sequence: [14, 15, 8, 5, 1, 4, 2, 3, 6, 11, 7, 10, 9, 13, 12]
+OFV: 2754.5	/ CPU: 1.913 seconds 	/ department sequence: [8, 1, 5, 4, 11, 10, 7, 2, 6, 14, 3, 9, 15, 13, 12]
+OFV: 2767.5	/ CPU: 1.567 seconds 	/ department sequence: [13, 12, 15, 9, 14, 3, 6, 10, 2, 5, 4, 1, 7, 11, 8]
