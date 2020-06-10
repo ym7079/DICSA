@@ -303,9 +303,9 @@ class Experiment {
                     if (newCuckoo_DR.compareTo(HostNest_DR.get(bestIdx)) <= -1) {
                         bestIdx = j;//--> population 에서 ofv 가 가장 좋은 solution 보다 더 좋으면
                         if (newCuckoo_DR.compareTo(currBestCuckoo_DR) <= -1) {
-                            out.print(newCuckoo_DR.departSeq + "\t");
+                            //out.print(newCuckoo_DR.departSeq + "\t");
                             currBestCuckoo_DR = newCuckoo_DR;
-                            out.println("best OFV update_s : " + currBestCuckoo_DR.OFV + "\tIteration: " + RK_Main.numIter);
+                            //out.println("best OFV update_s : " + currBestCuckoo_DR.OFV + "\tIteration: " + RK_Main.numIter);
                             currBestCuckoo_DR.iterNum = RK_Main.numIter;
                             RK_Main.numIter = 0;
                         }
@@ -391,9 +391,9 @@ class Experiment {
             if (newCuckoo_DR.compareTo(HostNest_DR.get(bestIdx)) <= -1){
                 bestIdx = j;
                 if (newCuckoo_DR.compareTo(currBestCuckoo_DR) <= -1) {
-                    out.print(newCuckoo_DR.departSeq+"\t");
+                    //out.print(newCuckoo_DR.departSeq+"\t");
                     currBestCuckoo_DR = (Solution_DR) newCuckoo_DR.clone();
-                    out.println("best OFV update_b : "+ currBestCuckoo_DR.OFV+"\tIteration: "+RK_Main.numIter);
+                    //out.println("best OFV update_b : "+ currBestCuckoo_DR.OFV+"\tIteration: "+RK_Main.numIter);
                     currBestCuckoo_DR.iterNum = RK_Main.numIter;
                     RK_Main.numIter = 0;
                 }
@@ -440,9 +440,9 @@ class Experiment {
             if (newCuckoo_DR.compareTo(HostNest_DR.get(bestIdx)) <= -1){
                 bestIdx = worstIndex;
                 if (newCuckoo_DR.compareTo(currBestCuckoo_DR) <= -1) {
-                    out.print(newCuckoo_DR.departSeq+"\t");
+                    //out.print(newCuckoo_DR.departSeq+"\t");
                     currBestCuckoo_DR =  (Solution_DR) newCuckoo_DR.clone();
-                    out.println("best OFV update_w : "+ currBestCuckoo_DR.OFV+"\tIteration: "+RK_Main.numIter);
+                    //out.println("best OFV update_w : "+ currBestCuckoo_DR.OFV+"\tIteration: "+RK_Main.numIter);
                     currBestCuckoo_DR.iterNum = RK_Main.numIter;
                     RK_Main.numIter = 0;
                 }
@@ -494,8 +494,8 @@ class Experiment {
          *  this will make sure the system will not be trapped in a local optimum **/
         //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         updateKeySeq(nest);
-        newDepartSeq = g.departSeqUpdate(newKeySeq);
-        //steepestDescent_best("DR");
+        //newDepartSeq = g.departSeqUpdate(newKeySeq);
+        steepestDescent_best("DR");
     }
     private void updateKeySeq(Solution_SR tmpSol) throws Exception {
         int rnIntDS = numDepart;
@@ -543,10 +543,8 @@ class Experiment {
     private void updateKeySeq(Solution_DR tmpSol) throws Exception {
         int rnIntDS = numDepart;
         //int rnIntDS = rd.nextInt(numDepart-1)+1;
-        LinkedList<Double> tmpKeySeq = new LinkedList<>();
-        LinkedList<Integer> tmpDepartSeq = new LinkedList<>();
-        tmpKeySeq.addAll(tmpSol.keySeq);
-        tmpDepartSeq.addAll(tmpSol.departSeq);
+        LinkedList<Double> tmpKeySeq = new LinkedList<>(tmpSol.keySeq);
+        LinkedList<Integer> tmpDepartSeq = new LinkedList<>(tmpSol.departSeq);
 
         //KeySeq update
         for(int i = 0; i < rnIntDS; i++){
@@ -558,7 +556,7 @@ class Experiment {
                 //departSeq update
                 if(key == Collections.max(tmpKeySeq)) continue;
                 int tempValue = i+1;
-                tmpDepartSeq.remove(tmpDepartSeq.indexOf(tempValue));
+                tmpDepartSeq.remove((Integer) tempValue);
                 tmpDepartSeq.addLast(tempValue);
 
                 tmpKeySeq = g.keySeqUpdate(tmpDepartSeq);

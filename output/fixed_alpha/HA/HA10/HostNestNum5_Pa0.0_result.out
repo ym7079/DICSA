@@ -1,0 +1,16 @@
+-- HA10 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+-- 2020-06-09 19:13 result data
+OFV: 821.0	/ CPU: 1.823 seconds 	/ department sequence: [9, 10, 3, 2, 7, 4, 1, 6, 8, 5]
+OFV: 821.0	/ CPU: 1.728 seconds 	/ department sequence: [10, 9, 3, 2, 7, 4, 1, 6, 8, 5]
+OFV: 821.0	/ CPU: 1.039 seconds 	/ department sequence: [9, 10, 3, 2, 7, 4, 1, 6, 8, 5]
+OFV: 821.0	/ CPU: 1.080 seconds 	/ department sequence: [1, 5, 8, 6, 4, 7, 3, 2, 9, 10]
+OFV: 821.0	/ CPU: 1.419 seconds 	/ department sequence: [9, 10, 3, 2, 4, 7, 1, 6, 8, 5]
+-- HA10 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+-- 2020-06-09 19:53 result data
+OFV: 821.0	/ CPU: 1.781 seconds 	/ department sequence: [9, 10, 3, 2, 7, 4, 1, 6, 8, 5]

@@ -17,10 +17,10 @@ class RK_Main {
     public static LinkedList<Solution> bestParamNest;
 ////instance 관련 parameter
     private static final String LAYOUT_PROB_TYPE = "DR";
-    private static final String PROB_TYPE = "HA"; //instance 문제 유형
-    private static final boolean IS_CLASSICAL = (PROB_TYPE == "Classical");
-    private static final String INSTANCE_NAME = "HA13"; //instance 문제 이름
-    private static final double OPTIMAL_OFV = 1021.0;
+    private static final String PROB_TYPE = "Classical"; //instance 문제 유형
+    //private static final boolean IS_CLASSICAL = (PROB_TYPE == "Classical");
+    private static final String INSTANCE_NAME = "Small10"; //instance 문제 이름
+    private static final double OPTIMAL_OFV = 2624.5;
 ////Dummy 관련 parameter
     private static final boolean IS_DUMMY = false; // dummy를 만들지 여부
     private static final int NUM_DUMMY = 10; // dummy department 수
@@ -35,7 +35,8 @@ class RK_Main {
 
     /**Main Method**/
     public static void main(String[] args) throws Exception {
-        createDataset();
+        boolean IS_CLASSICAL = (PROB_TYPE == "Classical");
+        //createDataset(IS_CLASSICAL);
         //int configNum; // configuration (= parameter set) number
 
         ArrayList<String> probNameSet = new ArrayList<>();
@@ -76,8 +77,8 @@ class RK_Main {
                     for (double Pa : probASet) {
                         for(double Pc: probCSet) {
                             if (Pa == 0.0 && Pc != 0.0) continue;
-                            if (Pa == 0.25 /*|| Pa == 0.25||Pa ==0.35*/) {
-                                out.println("population size: " + HostNestNum + ",probability a: " + Pa + ",probability c: " + Pc +"-------------------------");
+                            if (Pa == 0.0 || Pa == 0.25/*||Pa ==0.35*/) {
+                                out.println("population size: " + HostNestNum + "/  probability a: " + Pa + "/  probability c: " + Pc +"-------------------------");
                                 summary.writeln_parameters(HostNestNum, Pa);
                                 CS_Algorithm(summary, HostNestNum, Pa, Pc, ALPHA);
                             }
@@ -98,7 +99,7 @@ class RK_Main {
         out.println("Successfully finished.\n");
     }
     /**Create the Name of Problem Instance or the Value of Cuckoo Search Algorithm **/
-    private static void createDataset() throws Exception {
+    private static void createDataset(boolean IS_CLASSICAL) throws Exception {
         CreatingDataset.createProbNameDir();
 
         if (!IS_CLASSICAL){
@@ -110,61 +111,6 @@ class RK_Main {
             }
         }
     }
-    /**Read the Name of Problem Instance or the Value of Cuckoo Search Algorithm **/
-    private static void readProbNameSet(ArrayList<String>probName_set) throws Exception {
-        File file;
-        if(PROB_TYPE == "Classical") file = new File("dataset/Problems/prob"+ LAYOUT_PROB_TYPE + PROB_TYPE);
-        else file = new File("dataset/Problems/prob"+ PROB_TYPE);
-        try{
-            BufferedReader br = new BufferedReader(new FileReader(file)); // FileReader(): 파일 읽어오기
-            String[] strings = br.readLine().split(",");//br의 내용을 ,에 따라 나눠 strs 문자열 배열에 저장
-            Collections.addAll(probName_set, strings);// 문자열 배열strs 을 ArrayList에 그대로 옮기기
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-    private static void readParameterSet(String probName, ArrayList<Integer> HostNestNum_set, ArrayList<Double> ProbA_set, ArrayList<Double> ProbC_set, boolean isClassical){
-        if(isClassical){
-            if (probName.contains("Small"))readParameterSet(probName,HostNestNum_set,ProbA_set,ProbC_set,"Small");
-            else readParameterSet(probName,HostNestNum_set,ProbA_set,ProbC_set,"");
-        }
-        else readParameterSet(probName,HostNestNum_set,ProbA_set,ProbC_set, PROB_TYPE);
-    }
-    private static void readParameterSet(String probName, ArrayList<Integer> HostNestNum_set, ArrayList<Double> ProbA_set, ArrayList<Double> ProbC_set,String probType) {
-        /** File Usage
-         *  file path -> dataset/Parameters/
-         *  file name -> %probName%.parameter
-         *  contents are comma-seperate
-         *  contenst order -> HostNestNum, P_a (one for each line)
-         */
-        HostNestNum_set.clear(); ProbA_set.clear();
-        if (probName.contains("Small")) probType = "Small";
-        probType = probType+"/";
-        File file = new File("dataset/Parameters/"+ probType+ probName + ".parameter");
-        String[] strs;
-        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-            strs = br.readLine().split(",");
-            for (String str : strs) {
-                HostNestNum_set.add(Integer.parseInt(str));
-            }
-            strs = br.readLine().split(",");
-            for (String str : strs) {
-                ProbA_set.add(Double.parseDouble(str));
-            }
-            strs = br.readLine().split(",");
-            for (String str : strs) {
-                ProbC_set.add(Double.parseDouble(str));
-            }
-        }catch(Exception e) {
-            e.printStackTrace();
-        }
-
-    }
-    /** The Parameter values **/
-    public static int getNumDummy() {
-        return NUM_DUMMY;
-    }
-    public static double getLengthDummy() { return LENGTH_DUMMY; }
     /** The Body of Random-Key Discrete Cuckoo Search Algorithm **/
     private static void CS_Algorithm(OutputWriter summary, int HostNestNum, double Pa, double Pc, double alpha)throws Exception{
         Experiment exp;
@@ -201,8 +147,9 @@ class RK_Main {
                 if(numIter % 100 == 0 && numIter >= 100){
                     if(LAYOUT_PROB_TYPE =="SR")exp.initHostNest(exp.currBestCuckoo_SR);
                     else if(LAYOUT_PROB_TYPE =="DR")exp.initHostNest(exp.currBestCuckoo_DR);
-                    if (numIter >= 1500) Solution.isIterOver1500 = true;
                 }
+                if (numIter >= 1500) Solution.isIterOver1500 = true;
+                else Solution.isIterOver1500 = false;
               /** The second phase: Start Searching with a fraction Pc of Smart Cuckoos **/
               //smart cuckoos begin by exploring new areas from the current solutions ==> diversification
                 if(Pc != 0.0) exp.searchWithSmartCuckoos(LAYOUT_PROB_TYPE);
@@ -300,6 +247,61 @@ class RK_Main {
         if(LAYOUT_PROB_TYPE =="SR")summary.writeln_summary_SR(Nest_Set/*OFV_Set,CPUTime_Set*/,bestParamNest.size()-1);
         else if(LAYOUT_PROB_TYPE =="DR")summary.writeln_summary_DR(nestSet_DR/*OFV_Set,CPUTime_Set*/,bestParamNest.size()-1);
     }//CS Algorithm
+    /**Read the Name of Problem Instance or the Value of Cuckoo Search Algorithm **/
+    private static void readProbNameSet(ArrayList<String>probName_set) throws Exception {
+        File file;
+        if(PROB_TYPE == "Classical") file = new File("dataset/Problems/prob"+ LAYOUT_PROB_TYPE + PROB_TYPE);
+        else file = new File("dataset/Problems/prob"+ PROB_TYPE);
+        try{
+            BufferedReader br = new BufferedReader(new FileReader(file)); // FileReader(): 파일 읽어오기
+            String[] strings = br.readLine().split(",");//br의 내용을 ,에 따라 나눠 strs 문자열 배열에 저장
+            Collections.addAll(probName_set, strings);// 문자열 배열strs 을 ArrayList에 그대로 옮기기
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    private static void readParameterSet(String probName, ArrayList<Integer> HostNestNum_set, ArrayList<Double> ProbA_set, ArrayList<Double> ProbC_set, boolean isClassical){
+        if(isClassical){
+            if (probName.contains("Small"))readParameterSet(probName,HostNestNum_set,ProbA_set,ProbC_set,"Small");
+            else readParameterSet(probName,HostNestNum_set,ProbA_set,ProbC_set,"");
+        }
+        else readParameterSet(probName,HostNestNum_set,ProbA_set,ProbC_set, PROB_TYPE);
+    }
+    private static void readParameterSet(String probName, ArrayList<Integer> HostNestNum_set, ArrayList<Double> ProbA_set, ArrayList<Double> ProbC_set,String probType) {
+        /** File Usage
+         *  file path -> dataset/Parameters/
+         *  file name -> %probName%.parameter
+         *  contents are comma-seperate
+         *  contenst order -> HostNestNum, P_a (one for each line)
+         */
+        HostNestNum_set.clear(); ProbA_set.clear(); ProbC_set.clear();
+        if (probName.contains("Small")) probType = "Small";
+        probType = probType+"/";
+        File file = new File("dataset/Parameters/"+ probType+ probName + ".parameter");
+        String[] strs;
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            strs = br.readLine().split(",");
+            for (String str : strs) {
+                HostNestNum_set.add(Integer.parseInt(str));
+            }
+            strs = br.readLine().split(",");
+            for (String str : strs) {
+                ProbA_set.add(Double.parseDouble(str));
+            }
+            strs = br.readLine().split(",");
+            for (String str : strs) {
+                ProbC_set.add(Double.parseDouble(str));
+            }
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+    /** The Parameter values **/
+    public static int getNumDummy() {
+        return NUM_DUMMY;
+    }
+    public static double getLengthDummy() { return LENGTH_DUMMY; }
 }//Main Class
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 abstract class Solution implements Comparable<Solution>, Cloneable {
@@ -480,26 +482,26 @@ class Solution_DR extends Solution {
         representSol(departSeq);
         upDown = true;
         setDepartCentroid(upDown);
-        evaluateSol();
-        /*if(this.OFV <= bestOFV*1.2) {
+        /*evaluateSol();
+        if(this.OFV <= bestOFV*1.2) {
             evaluateSol(model);
         }*/
         if(isIterOver1500) {
             evaluateSol(model);
-        }
+        }else evaluateSol();
     }
     Solution_DR(LinkedList<Integer> departSeq, LinkedList<Double> keySeq) throws Exception {
         representSol(departSeq);
         this.keySeq = keySeq;
         upDown = true;
         setDepartCentroid(upDown);
-        evaluateSol();
-        /*if(this.OFV <= bestOFV*1.2) {
+        /*evaluateSol();
+        if(this.OFV <= bestOFV*1.2) {
             evaluateSol(model);
         }*/
         if(isIterOver1500) {
             evaluateSol(model);
-        }
+        }else evaluateSol();
     }
 // --------------------------------------------------------
 //	Method : Double Row FLP Solution 생성

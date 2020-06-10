@@ -656,3 +656,79 @@ Summary of computational results with the fixed_alpha parameter set
 Problem	Nest Number	Pa		Best OFV	CPU Time(second)
 -- 2020-06-09 20:05 result data
 HA12		5			0.25		1021.0		5.117
+The single-row facility layout problem(SRFLP) with Cuckoo Search Algorithm(CS)
+
+Summary of computational results with the fixed_alpha parameter set
+
+================================================================================
+Problem	Nest Number	Pa		Best OFV	CPU Time(second)
+-- 2020-06-10 01:37 result data
+HA12		5			0.25		1021.0		3.983
+The single-row facility layout problem(SRFLP) with Cuckoo Search Algorithm(CS)
+
+Summary of computational results with the fixed_alpha parameter set
+
+================================================================================
+Problem	Nest Number	Pa		Best OFV	CPU Time(second)
+-- 2020-06-10 01:47 result data
+HA12		5			0.25		1021.0		3.901
+The single-row facility layout problem(SRFLP) with Cuckoo Search Algorithm(CS)
+
+Summary of computational results with the fixed_alpha parameter set
+
+================================================================================
+Problem	Nest Number	Pa		Best OFV	CPU Time(second)
+The single-row facility layout problem(SRFLP) with Cuckoo Search Algorithm(CS)
+
+Summary of computational results with the fixed_alpha parameter set
+
+================================================================================
+Problem	Nest Number	Pa		Best OFV	CPU Time(second)
+-- 2020-06-10 01:59 result data
+HA13		5			0.0		1520.5		1.626
+The single-row facility layout problem(SRFLP) with Cuckoo Search Algorithm(CS)
+
+Summary of computational results with the fixed_alpha parameter set
+
+================================================================================
+Problem	Nest Number	Pa		Best OFV	CPU Time(second)
+The single-row facility layout problem(SRFLP) with Cuckoo Search Algorithm(CS)
+
+Summary of computational results with the fixed_alpha parameter set
+
+================================================================================
+Problem	Nest Number	Pa		Best OFV	CPU Time(second)
+-- 2020-06-10 02:14 result data
+HA14		5			0.0		1833.5		1.798
+The single-row facility layout problem(SRFLP) with Cuckoo Search Algorithm(CS)
+
+Summary of computational results with the fixed_alpha parameter set
+
+================================================================================
+Problem	Nest Number	Pa		Best OFV	CPU Time(second)
+-- 2020-06-10 02:32 result data
+HA15		5			0.25		2624.5		2.776
+The single-row facility layout problem(SRFLP) with Cuckoo Search Algorithm(CS)
+
+Summary of computational results with the fixed_alpha parameter set
+
+================================================================================
+Problem	Nest Number	Pa		Best OFV	CPU Time(second)
+-- 2020-06-10 02:37 result data
+HA15		5			0.0		2624.5		1.496
+The single-row facility layout problem(SRFLP) with Cuckoo Search Algorithm(CS)
+
+Summary of computational results with the fixed_alpha parameter set
+
+================================================================================
+Problem	Nest Number	Pa		Best OFV	CPU Time(second)
+-- 2020-06-10 03:09 result data
+HA15		5			0.0		2624.5		5.936
+The single-row facility layout problem(SRFLP) with Cuckoo Search Algorithm(CS)
+
+Summary of computational results with the fixed_alpha parameter set
+
+================================================================================
+Problem	Nest Number	Pa		Best OFV	CPU Time(second)
+-- 2020-06-10 03:58 result data
+HA15		5			0.0		2624.5		2.179
