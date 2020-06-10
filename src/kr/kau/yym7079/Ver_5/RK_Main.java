@@ -51,7 +51,7 @@ class RK_Main {
 
         readProbNameSet(probNameSet);// 각 문제들의 파일명을 읽어들이는 메소드
         for(String probName : probNameSet) {
-            if (probName.contains(INSTANCE_NAME)) {
+            //if (probName.contains(INSTANCE_NAME)) {
 
                 OutputWriter summary = new OutputWriter(probName);
                 summary.writeln_clock();
@@ -75,10 +75,10 @@ class RK_Main {
 
                 for (int HostNestNum : hostNestNumSet) {
                     for (double Pa : probASet) {
-                        for(double Pc: probCSet) {
+                        for (double Pc : probCSet) {
                             if (Pa == 0.0 && Pc != 0.0) continue;
                             if (Pa == 0.0 || Pa == 0.25/*||Pa ==0.35*/) {
-                                out.println("population size: " + HostNestNum + "/  probability a: " + Pa + "/  probability c: " + Pc +"-------------------------");
+                                out.println("population size: " + HostNestNum + "/  probability a: " + Pa + "/  probability c: " + Pc + "-------------------------");
                                 summary.writeln_parameters(HostNestNum, Pa);
                                 CS_Algorithm(summary, HostNestNum, Pa, Pc, ALPHA);
                             }
@@ -89,7 +89,7 @@ class RK_Main {
 
                 Solution bestInstanceNest = Collections.min(bestParamNest);
                 bestSolution.add(bestInstanceNest);
-            }
+            //}
         }
         // Instance 별 best 값 기록
         for (Solution nest : bestSolution){
@@ -232,7 +232,14 @@ class RK_Main {
             }
             bestOFV = bestNest.OFV;
         }
-        out.print(sumOFV/ STOP_REP + "/\t");
+        double avgOFV = sumOFV/ STOP_REP;
+        double sumDev = 0;
+        for(Solution_DR sol: nestSet_DR){
+            sumDev += Math.pow(avgOFV - sol.OFV,2);
+        }
+        double STD = Math.sqrt(sumDev / STOP_REP);
+        out.print("average OFV = "+ avgOFV + "/\t");
+        out.print("STD value = " +STD);
         out.print(sumTime/ STOP_REP + "/\t");
         out.println(numOptimal);
 
