@@ -102,3 +102,72 @@ HostNestNum = 5, P_a = 0.25
 --------------------------------------------
 -- 2020-06-09 19:06 result data
 OFV: 52.5	/ CPU: 0.623 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+-- HA5 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-10 22:27 result data
+OFV: 52.5	/ CPU: 3.355 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 3.889 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 3.717 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 3.680 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 3.594 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 3.749 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 3.451 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 3.546 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 3.044 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 3.276 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+-- HA5 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-10 22:28 result data
+OFV: 52.5	/ CPU: 2.950 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 2.696 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 3.072 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 2.799 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 2.507 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 3.020 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 2.936 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 3.680 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 4.187 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 3.773 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+-- HA5 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-10 22:28 result data
+OFV: 52.5	/ CPU: 5.449 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 4.885 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 5.075 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 5.070 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 6.088 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 5.412 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 5.634 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 4.876 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 5.669 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 5.671 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+-- HA5 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-10 22:29 result data
+OFV: 52.5	/ CPU: 6.373 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 6.536 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 6.268 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 6.387 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 6.889 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 6.990 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 6.739 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 6.807 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+-- HA5 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-10 22:31 result data
+OFV: 52.5	/ CPU: 1.988 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 1.978 seconds 	/ department sequence: [4, 1, 3, 5, 2]
+OFV: 52.5	/ CPU: 2.110 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 2.143 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 2.028 seconds 	/ department sequence: [1, 4, 3, 5, 2]
+OFV: 52.5	/ CPU: 2.358 seconds 	/ department sequence: [1, 4, 3, 5, 2]

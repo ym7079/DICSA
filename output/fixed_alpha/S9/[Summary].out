@@ -372,3 +372,9 @@ HostNestNum = 5, P_a = 0.25
 Best OFV : 1179.0	CPU Time : 3.832 seconds (Processing time for the best solution)
 Average OFV : 1179.000
 Average CPU Time : 4.415
+S9 summary
+
+-- 2020-06-10 21:22 result data
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------

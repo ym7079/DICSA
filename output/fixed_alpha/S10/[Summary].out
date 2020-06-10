@@ -202,3 +202,36 @@ HostNestNum = 5, P_a = 0.25
 Best OFV : 1351.0	CPU Time : 4.113 seconds (Processing time for the best solution)
 Average OFV : 1351.000
 Average CPU Time : 4.457
+S10 summary
+
+-- 2020-06-10 21:22 result data
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+Best OFV : 1351.0	CPU Time : 1.104 seconds (Processing time for the best solution)
+Average OFV : 1351.000
+Average CPU Time : 1.529
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 1351.0	CPU Time : 2.249 seconds (Processing time for the best solution)
+Average OFV : 1351.000
+Average CPU Time : 2.686
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 1351.0	CPU Time : 1.789 seconds (Processing time for the best solution)
+Average OFV : 1351.000
+Average CPU Time : 2.334
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 1351.0	CPU Time : 2.991 seconds (Processing time for the best solution)
+Average OFV : 1351.000
+Average CPU Time : 3.298
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 1351.0	CPU Time : 3.829 seconds (Processing time for the best solution)
+Average OFV : 1351.000
+Average CPU Time : 4.354

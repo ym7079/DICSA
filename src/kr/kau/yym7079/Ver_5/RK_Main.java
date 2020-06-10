@@ -17,10 +17,10 @@ class RK_Main {
     public static LinkedList<Solution> bestParamNest;
 ////instance 관련 parameter
     private static final String LAYOUT_PROB_TYPE = "DR";
-    private static final String PROB_TYPE = "Classical"; //instance 문제 유형
+    private static final String PROB_TYPE = "Am"; //instance 문제 유형
     //private static final boolean IS_CLASSICAL = (PROB_TYPE == "Classical");
-    private static final String INSTANCE_NAME = "Small10"; //instance 문제 이름
-    private static final double OPTIMAL_OFV = 2624.5;
+    private static final String INSTANCE_NAME = "Am12c"; //instance 문제 이름
+    private static final double OPTIMAL_OFV = 1606.5;
 ////Dummy 관련 parameter
     private static final boolean IS_DUMMY = false; // dummy를 만들지 여부
     private static final int NUM_DUMMY = 10; // dummy department 수
@@ -51,7 +51,7 @@ class RK_Main {
 
         readProbNameSet(probNameSet);// 각 문제들의 파일명을 읽어들이는 메소드
         for(String probName : probNameSet) {
-            //if (probName.contains(INSTANCE_NAME)) {
+            if (probName.contains(INSTANCE_NAME)) {
 
                 OutputWriter summary = new OutputWriter(probName);
                 summary.writeln_clock();
@@ -89,7 +89,7 @@ class RK_Main {
 
                 Solution bestInstanceNest = Collections.min(bestParamNest);
                 bestSolution.add(bestInstanceNest);
-            //}
+            }
         }
         // Instance 별 best 값 기록
         for (Solution nest : bestSolution){
@@ -148,7 +148,14 @@ class RK_Main {
                     if(LAYOUT_PROB_TYPE =="SR")exp.initHostNest(exp.currBestCuckoo_SR);
                     else if(LAYOUT_PROB_TYPE =="DR")exp.initHostNest(exp.currBestCuckoo_DR);
                 }
-                if (numIter >= 1500) Solution.isIterOver1500 = true;
+                if (numIter >= 1500) {
+                    Solution.isIterOver1500 = true;
+                    Solution_DR tmpBest = new Solution_DR(exp.currBestCuckoo_DR.departSeq);
+                    if(tmpBest.OFV < exp.currBestCuckoo_DR.OFV){
+                        out.println("OFV update by LP : "  + exp.currBestCuckoo_DR.OFV + "->" + tmpBest.OFV);
+                    }
+                    exp.currBestCuckoo_DR = tmpBest;
+                }
                 else Solution.isIterOver1500 = false;
               /** The second phase: Start Searching with a fraction Pc of Smart Cuckoos **/
               //smart cuckoos begin by exploring new areas from the current solutions ==> diversification
@@ -177,8 +184,8 @@ class RK_Main {
             out.println(STOP_ITER +"iteration process time: "+(endTime-startIterTime)/1000.0);
             double CPU_time = (endTime - startTime)/ 1000.0;
             out.println("Total Process Time : "+CPU_time+"sec");
-            out.println("check Iteration : "+checkIter);
-            out.println("temp Iteration : "+tempIter);
+            //out.println("check Iteration : "+checkIter);
+            //out.println("temp Iteration : "+tempIter);
             tempIter = 0;
             if(LAYOUT_PROB_TYPE =="SR"){
                 //Best OFV update
@@ -208,7 +215,7 @@ class RK_Main {
             }
         }/** End of Replication Part ===========================================================================================**/
         //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        out.println("Avg OFV/\tTotal Process Time/\toptimal 횟수");
+        //out.println("Avg OFV/\tTotal Process Time/\toptimal 횟수");
         double sumOFV = 0.0;
         double sumTime = 0.0;
         int numOptimal = 0;
@@ -239,9 +246,9 @@ class RK_Main {
         }
         double STD = Math.sqrt(sumDev / STOP_REP);
         out.print("average OFV = "+ avgOFV + "/\t");
-        out.print("STD value = " +STD);
-        out.print(sumTime/ STOP_REP + "/\t");
-        out.println(numOptimal);
+        out.print("STD value = " +STD+ "/\t");
+        out.print("Total Process Time = "+ sumTime/ STOP_REP + "/\t");
+        out.println("optimal 횟수 = " +numOptimal);
 
         //Best OFV update & print
 
@@ -397,13 +404,7 @@ abstract class Solution implements Comparable<Solution>, Cloneable {
     }
 //---------------------------------------------------------
     public int compareTo(Solution s) {
-    if(this.OFV > s.OFV){
-        return 1;
-    }else if(this.OFV < s.OFV){
-        return -1;
-    }else{
-        return 0;
-    }
+        return Double.compare(this.OFV, s.OFV);
 }//compareTo()
     public Object clone() {
         Object obj = null;
@@ -413,7 +414,7 @@ abstract class Solution implements Comparable<Solution>, Cloneable {
         return obj;
     }
 
-    class Depart{
+    static class Depart{
         double start;
         double centroid = 0.0;
         double length;
