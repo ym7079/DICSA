@@ -1,0 +1,54 @@
+-- HA13 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+-- 2020-06-10 01:55 result data
+OFV: 1537.5	/ CPU: 0.733 seconds 	/ department sequence: [1, 9, 2, 7, 10, 11, 8, 12, 5, 4, 13, 6, 3]
+OFV: 1520.5	/ CPU: 1.779 seconds 	/ department sequence: [13, 3, 6, 12, 8, 5, 11, 4, 1, 10, 7, 9, 2]
+OFV: 1527.0	/ CPU: 1.313 seconds 	/ department sequence: [1, 9, 2, 7, 10, 11, 8, 12, 5, 4, 13, 6, 3]
+OFV: 1537.5	/ CPU: 0.357 seconds 	/ department sequence: [1, 9, 2, 7, 10, 11, 8, 12, 5, 4, 13, 6, 3]
+OFV: 1525.0	/ CPU: 1.491 seconds 	/ department sequence: [1, 9, 2, 10, 7, 11, 4, 12, 5, 8, 13, 6, 3]
+OFV: 1527.0	/ CPU: 1.373 seconds 	/ department sequence: [9, 1, 2, 10, 7, 11, 8, 12, 5, 4, 13, 6, 3]
+OFV: 1520.5	/ CPU: 2.723 seconds 	/ department sequence: [13, 3, 6, 12, 8, 5, 11, 4, 1, 10, 7, 9, 2]
+OFV: 1520.5	/ CPU: 1.626 seconds 	/ department sequence: [13, 3, 6, 12, 8, 5, 11, 4, 1, 10, 7, 9, 2]
+OFV: 1520.5	/ CPU: 1.796 seconds 	/ department sequence: [2, 9, 1, 7, 10, 11, 4, 12, 5, 8, 6, 13, 3]
+OFV: 1530.5	/ CPU: 0.439 seconds 	/ department sequence: [9, 1, 2, 10, 7, 11, 4, 12, 5, 8, 13, 6, 3]
+-- HA13 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+-- 2020-06-10 22:36 result data
+OFV: 1525.5	/ CPU: 1.585 seconds 	/ department sequence: [2, 9, 1, 7, 10, 4, 11, 5, 12, 8, 6, 13, 3]
+OFV: 1527.0	/ CPU: 1.172 seconds 	/ department sequence: [9, 1, 2, 10, 7, 11, 8, 12, 5, 4, 13, 6, 3]
+OFV: 1525.0	/ CPU: 0.827 seconds 	/ department sequence: [9, 1, 2, 10, 7, 11, 4, 12, 5, 8, 13, 6, 3]
+OFV: 1525.0	/ CPU: 0.674 seconds 	/ department sequence: [1, 9, 2, 7, 10, 11, 4, 12, 5, 8, 13, 6, 3]
+-- HA13 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+-- 2020-06-10 22:36 result data
+OFV: 1520.5	/ CPU: 2.142 seconds 	/ department sequence: [9, 2, 1, 7, 10, 11, 4, 12, 5, 8, 6, 13, 3]
+OFV: 1525.0	/ CPU: 1.546 seconds 	/ department sequence: [3, 13, 6, 8, 12, 5, 4, 11, 10, 7, 1, 2, 9]
+OFV: 1525.5	/ CPU: 1.089 seconds 	/ department sequence: [13, 3, 6, 8, 12, 5, 4, 1, 11, 10, 7, 9, 2]
+OFV: 1525.0	/ CPU: 0.581 seconds 	/ department sequence: [1, 9, 2, 7, 10, 11, 4, 12, 5, 8, 13, 6, 3]
+OFV: 1589.5	/ CPU: 0.555 seconds 	/ department sequence: [13, 3, 6, 10, 7, 11, 4, 12, 5, 8, 2, 1, 9]
+OFV: 1525.0	/ CPU: 0.875 seconds 	/ department sequence: [3, 13, 6, 8, 12, 5, 4, 11, 10, 7, 2, 1, 9]
+OFV: 1520.5	/ CPU: 1.027 seconds 	/ department sequence: [13, 3, 6, 12, 8, 5, 11, 4, 1, 10, 7, 9, 2]
+OFV: 1533.5	/ CPU: 0.861 seconds 	/ department sequence: [13, 3, 6, 12, 8, 5, 10, 4, 11, 1, 7, 2, 9]
+OFV: 1586.5	/ CPU: 0.510 seconds 	/ department sequence: [1, 9, 2, 11, 4, 5, 12, 8, 10, 7, 13, 6, 3]
+OFV: 1525.0	/ CPU: 1.240 seconds 	/ department sequence: [13, 3, 6, 12, 8, 5, 4, 11, 10, 1, 7, 9, 2]
+-- HA13 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+-- 2020-06-10 22:39 result data
+OFV: 1525.0	/ CPU: 3.176 seconds 	/ department sequence: [1, 9, 2, 10, 7, 11, 4, 12, 5, 8, 13, 6, 3]
+OFV: 1520.5	/ CPU: 2.888 seconds 	/ department sequence: [9, 2, 1, 7, 10, 11, 4, 12, 5, 8, 6, 13, 3]
+OFV: 1520.5	/ CPU: 2.795 seconds 	/ department sequence: [2, 9, 1, 7, 10, 11, 4, 12, 5, 8, 6, 13, 3]
+OFV: 1525.0	/ CPU: 1.717 seconds 	/ department sequence: [1, 9, 2, 7, 10, 11, 4, 12, 5, 8, 13, 6, 3]
+OFV: 1520.5	/ CPU: 4.491 seconds 	/ department sequence: [2, 9, 1, 7, 10, 11, 4, 12, 5, 8, 6, 13, 3]
+OFV: 1520.5	/ CPU: 2.811 seconds 	/ department sequence: [9, 2, 1, 7, 10, 11, 4, 12, 5, 8, 6, 13, 3]
+OFV: 1525.0	/ CPU: 2.046 seconds 	/ department sequence: [1, 9, 2, 10, 7, 11, 4, 12, 5, 8, 13, 6, 3]
+OFV: 1525.0	/ CPU: 2.424 seconds 	/ department sequence: [13, 3, 6, 8, 12, 5, 4, 11, 10, 7, 2, 1, 9]
+OFV: 1520.5	/ CPU: 1.956 seconds 	/ department sequence: [13, 3, 6, 12, 8, 5, 11, 4, 1, 10, 7, 9, 2]
+OFV: 1525.0	/ CPU: 1.610 seconds 	/ department sequence: [1, 9, 2, 7, 10, 11, 4, 12, 5, 8, 13, 6, 3]

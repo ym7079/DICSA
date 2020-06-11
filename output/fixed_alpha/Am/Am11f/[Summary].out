@@ -1,0 +1,249 @@
+Am11f summary
+
+-- 2020-06-10 05:28 result data
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.12 seconds (Processing time for the best solution)
+Average OFV : 835.200
+Average CPU Time : 1.682
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.158 seconds (Processing time for the best solution)
+Average OFV : 841.600
+Average CPU Time : 1.404
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.109 seconds (Processing time for the best solution)
+Average OFV : 837.350
+Average CPU Time : 1.507
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.1 seconds (Processing time for the best solution)
+Average OFV : 828.000
+Average CPU Time : 1.369
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.136 seconds (Processing time for the best solution)
+Average OFV : 840.500
+Average CPU Time : 1.296
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.041 seconds (Processing time for the best solution)
+Average OFV : 836.200
+Average CPU Time : 1.369
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 2.071 seconds (Processing time for the best solution)
+Average OFV : 830.200
+Average CPU Time : 2.996
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 2.089 seconds (Processing time for the best solution)
+Average OFV : 829.350
+Average CPU Time : 2.634
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 2.867 seconds (Processing time for the best solution)
+Average OFV : 825.650
+Average CPU Time : 3.423
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 3.902 seconds (Processing time for the best solution)
+Average OFV : 825.950
+Average CPU Time : 4.296
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.745 seconds (Processing time for the best solution)
+Average OFV : 833.700
+Average CPU Time : 2.231
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.934 seconds (Processing time for the best solution)
+Average OFV : 827.550
+Average CPU Time : 2.513
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 2.978 seconds (Processing time for the best solution)
+Average OFV : 827.900
+Average CPU Time : 3.345
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 3.884 seconds (Processing time for the best solution)
+Average OFV : 825.800
+Average CPU Time : 4.351
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.969 seconds (Processing time for the best solution)
+Average OFV : 827.900
+Average CPU Time : 2.458
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.945 seconds (Processing time for the best solution)
+Average OFV : 825.800
+Average CPU Time : 2.23
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 3.017 seconds (Processing time for the best solution)
+Average OFV : 829.650
+Average CPU Time : 3.812
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 3.734 seconds (Processing time for the best solution)
+Average OFV : 829.850
+Average CPU Time : 4.647
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.863 seconds (Processing time for the best solution)
+Average OFV : 835.750
+Average CPU Time : 2.488
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.966 seconds (Processing time for the best solution)
+Average OFV : 831.600
+Average CPU Time : 2.408
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 2.788 seconds (Processing time for the best solution)
+Average OFV : 825.650
+Average CPU Time : 3.587
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 3.819 seconds (Processing time for the best solution)
+Average OFV : 826.550
+Average CPU Time : 4.691
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.914 seconds (Processing time for the best solution)
+Average OFV : 828.550
+Average CPU Time : 2.737
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.828 seconds (Processing time for the best solution)
+Average OFV : 830.500
+Average CPU Time : 2.858
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 2.702 seconds (Processing time for the best solution)
+Average OFV : 827.250
+Average CPU Time : 3.551
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 4.001 seconds (Processing time for the best solution)
+Average OFV : 825.650
+Average CPU Time : 5.401
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.861 seconds (Processing time for the best solution)
+Average OFV : 825.950
+Average CPU Time : 2.673
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 2.006 seconds (Processing time for the best solution)
+Average OFV : 828.700
+Average CPU Time : 3.052
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 2.984 seconds (Processing time for the best solution)
+Average OFV : 825.800
+Average CPU Time : 3.207
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 3.906 seconds (Processing time for the best solution)
+Average OFV : 825.650
+Average CPU Time : 4.423
+Am11f summary
+
+-- 2020-06-10 16:46 result data
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.157 seconds (Processing time for the best solution)
+Average OFV : 838.500
+Average CPU Time : 1.486
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.916 seconds (Processing time for the best solution)
+Average OFV : 828.700
+Average CPU Time : 2.415
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.915 seconds (Processing time for the best solution)
+Average OFV : 827.750
+Average CPU Time : 2.181
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 3.003 seconds (Processing time for the best solution)
+Average OFV : 830.200
+Average CPU Time : 3.425
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 3.725 seconds (Processing time for the best solution)
+Average OFV : 828.900
+Average CPU Time : 4.337
+Am11f summary
+
+-- 2020-06-10 23:27 result data
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 1.417 seconds (Processing time for the best solution)
+Average OFV : 840.150
+Average CPU Time : 2.097
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 2.362 seconds (Processing time for the best solution)
+Average OFV : 832.000
+Average CPU Time : 3.055
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 2.734 seconds (Processing time for the best solution)
+Average OFV : 825.950
+Average CPU Time : 3.32
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 3.523 seconds (Processing time for the best solution)
+Average OFV : 827.100
+Average CPU Time : 5.167
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 825.5	CPU Time : 5.873 seconds (Processing time for the best solution)
+Average OFV : 825.950
+Average CPU Time : 7.218

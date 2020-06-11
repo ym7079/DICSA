@@ -1,0 +1,15 @@
+-- SA14b result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+-- 2020-06-10 17:30 result data
+OFV: 2765.0	/ CPU: 1.692 seconds 	/ department sequence: [3, 9, 6, 13, 10, 14, 2, 5, 1, 7, 4, 11, 12, 8]
+OFV: 2736.0	/ CPU: 1.398 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 1.640 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.5	/ CPU: 1.370 seconds 	/ department sequence: [8, 12, 11, 4, 14, 2, 7, 1, 5, 10, 6, 13, 3, 9]
+OFV: 2744.0	/ CPU: 1.437 seconds 	/ department sequence: [3, 9, 6, 13, 10, 5, 1, 7, 2, 14, 4, 11, 12, 8]
+OFV: 2736.0	/ CPU: 1.556 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 1.522 seconds 	/ department sequence: [12, 8, 11, 4, 7, 1, 14, 2, 10, 5, 13, 6, 3, 9]
+OFV: 2760.0	/ CPU: 1.830 seconds 	/ department sequence: [3, 9, 6, 13, 5, 10, 1, 11, 7, 4, 14, 2, 8, 12]
+OFV: 2736.0	/ CPU: 1.770 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.5	/ CPU: 1.945 seconds 	/ department sequence: [8, 12, 11, 4, 14, 2, 7, 1, 5, 10, 6, 13, 3, 9]

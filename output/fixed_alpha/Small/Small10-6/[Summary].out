@@ -1,0 +1,57 @@
+Small10-6 summary
+
+-- 2020-06-10 16:33 result data
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+Best OFV : 792.0	CPU Time : 1.286 seconds (Processing time for the best solution)
+Average OFV : 792.550
+Average CPU Time : 1.694
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 792.0	CPU Time : 2.01 seconds (Processing time for the best solution)
+Average OFV : 792.000
+Average CPU Time : 2.923
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 792.0	CPU Time : 2.089 seconds (Processing time for the best solution)
+Average OFV : 792.000
+Average CPU Time : 2.787
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 792.0	CPU Time : 2.922 seconds (Processing time for the best solution)
+Average OFV : 792.000
+Average CPU Time : 3.703
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 792.0	CPU Time : 3.925 seconds (Processing time for the best solution)
+Average OFV : 792.000
+Average CPU Time : 4.508
+Small10-6 summary
+
+-- 2020-06-10 22:01 result data
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+Best OFV : 792.0	CPU Time : 1.453 seconds (Processing time for the best solution)
+Average OFV : 792.550
+Average CPU Time : 1.919
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Small10-6 summary
+
+-- 2020-06-10 22:01 result data
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+Best OFV : 792.0	CPU Time : 1.578 seconds (Processing time for the best solution)
+Average OFV : 792.000
+Average CPU Time : 2.133
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------

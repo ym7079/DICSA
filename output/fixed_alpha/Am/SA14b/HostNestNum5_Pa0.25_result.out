@@ -1,0 +1,60 @@
+-- SA14b result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-10 17:31 result data
+OFV: 2736.5	/ CPU: 2.500 seconds 	/ department sequence: [8, 12, 11, 4, 14, 2, 7, 1, 5, 10, 6, 13, 3, 9]
+OFV: 2737.5	/ CPU: 3.715 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 7, 1, 5, 10, 6, 13, 3, 9]
+OFV: 2736.0	/ CPU: 3.079 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 3.129 seconds 	/ department sequence: [12, 8, 11, 4, 7, 1, 14, 2, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 3.972 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 4.258 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 3.560 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 4.185 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 5.066 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2747.0	/ CPU: 3.311 seconds 	/ department sequence: [9, 3, 6, 10, 13, 5, 7, 1, 4, 2, 14, 12, 11, 8]
+-- SA14b result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-10 17:31 result data
+OFV: 2736.0	/ CPU: 2.552 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 2.783 seconds 	/ department sequence: [12, 8, 11, 4, 7, 1, 14, 2, 10, 5, 13, 6, 3, 9]
+OFV: 2736.5	/ CPU: 2.744 seconds 	/ department sequence: [8, 12, 11, 4, 1, 7, 2, 14, 5, 10, 6, 13, 3, 9]
+OFV: 2736.0	/ CPU: 2.850 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 3.147 seconds 	/ department sequence: [8, 12, 11, 4, 14, 2, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 2.685 seconds 	/ department sequence: [8, 12, 11, 4, 14, 2, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 3.427 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.5	/ CPU: 3.843 seconds 	/ department sequence: [8, 12, 11, 4, 14, 2, 7, 1, 5, 10, 6, 13, 3, 9]
+OFV: 2736.5	/ CPU: 3.027 seconds 	/ department sequence: [8, 12, 11, 4, 14, 2, 7, 1, 5, 10, 6, 13, 3, 9]
+OFV: 2736.0	/ CPU: 2.655 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+-- SA14b result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-10 17:32 result data
+OFV: 2736.0	/ CPU: 4.010 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 4.848 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2744.0	/ CPU: 4.611 seconds 	/ department sequence: [3, 9, 6, 13, 10, 5, 1, 7, 2, 14, 4, 11, 12, 8]
+OFV: 2743.5	/ CPU: 4.829 seconds 	/ department sequence: [3, 9, 6, 13, 10, 5, 1, 7, 14, 2, 11, 4, 8, 12]
+OFV: 2736.0	/ CPU: 5.016 seconds 	/ department sequence: [3, 9, 6, 13, 5, 10, 7, 2, 1, 14, 4, 11, 12, 8]
+OFV: 2736.0	/ CPU: 4.738 seconds 	/ department sequence: [8, 12, 11, 4, 14, 2, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.5	/ CPU: 4.538 seconds 	/ department sequence: [8, 12, 11, 4, 14, 2, 7, 1, 5, 10, 6, 13, 3, 9]
+OFV: 2736.0	/ CPU: 4.934 seconds 	/ department sequence: [8, 12, 11, 4, 14, 2, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 5.123 seconds 	/ department sequence: [3, 9, 6, 13, 5, 10, 2, 14, 7, 1, 4, 11, 12, 8]
+OFV: 2736.0	/ CPU: 4.330 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+-- SA14b result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-10 17:32 result data
+OFV: 2736.0	/ CPU: 5.834 seconds 	/ department sequence: [8, 12, 11, 4, 14, 2, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 6.811 seconds 	/ department sequence: [3, 9, 6, 13, 5, 10, 7, 2, 1, 14, 4, 11, 12, 8]
+OFV: 2736.0	/ CPU: 7.725 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 5.348 seconds 	/ department sequence: [8, 12, 11, 4, 14, 2, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 6.855 seconds 	/ department sequence: [12, 8, 11, 4, 7, 1, 14, 2, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 5.590 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.0	/ CPU: 5.444 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2736.5	/ CPU: 6.560 seconds 	/ department sequence: [3, 9, 6, 13, 5, 10, 7, 14, 1, 2, 11, 4, 8, 12]
+OFV: 2736.0	/ CPU: 6.344 seconds 	/ department sequence: [12, 8, 11, 4, 2, 14, 1, 7, 10, 5, 13, 6, 3, 9]
+OFV: 2737.5	/ CPU: 7.594 seconds 	/ department sequence: [3, 9, 6, 13, 5, 10, 1, 2, 7, 14, 4, 12, 11, 8]

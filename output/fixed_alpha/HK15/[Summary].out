@@ -1,0 +1,45 @@
+HK15 summary
+
+-- 2020-06-11 04:06 result data
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+Best OFV : 16570.0	CPU Time : 1.9 seconds (Processing time for the best solution)
+Average OFV : 16582.000
+Average CPU Time : 3.169
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+HK15 summary
+
+-- 2020-06-11 04:07 result data
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+Best OFV : 16570.0	CPU Time : 2.859 seconds (Processing time for the best solution)
+Average OFV : 16599.000
+Average CPU Time : 2.935
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 16570.0	CPU Time : 3.986 seconds (Processing time for the best solution)
+Average OFV : 16594.000
+Average CPU Time : 5.116
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 16570.0	CPU Time : 3.385 seconds (Processing time for the best solution)
+Average OFV : 16593.000
+Average CPU Time : 4.483
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 16570.0	CPU Time : 4.664 seconds (Processing time for the best solution)
+Average OFV : 16576.000
+Average CPU Time : 7.153
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+Best OFV : 16570.0	CPU Time : 5.819 seconds (Processing time for the best solution)
+Average OFV : 16573.000
+Average CPU Time : 8.297

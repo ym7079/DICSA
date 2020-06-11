@@ -1,0 +1,15 @@
+-- HA13 result
+--------------------------------------------
+HostNestNum = 10, P_a = 0.0
+--------------------------------------------
+-- 2020-06-10 02:04 result data
+OFV: 1593.0	/ CPU: 4.185 seconds 	/ department sequence: [1, 9, 2, 7, 10, 11, 4, 13, 6, 5, 3, 12, 8]
+OFV: 1520.5	/ CPU: 2.469 seconds 	/ department sequence: [9, 2, 1, 7, 10, 11, 4, 12, 5, 8, 6, 13, 3]
+OFV: 1520.5	/ CPU: 1.926 seconds 	/ department sequence: [2, 9, 1, 7, 10, 11, 4, 12, 5, 8, 6, 13, 3]
+OFV: 1520.5	/ CPU: 1.714 seconds 	/ department sequence: [9, 2, 1, 7, 10, 11, 4, 12, 5, 8, 6, 13, 3]
+OFV: 1527.0	/ CPU: 1.898 seconds 	/ department sequence: [9, 1, 2, 7, 10, 11, 8, 12, 5, 4, 13, 6, 3]
+OFV: 1525.0	/ CPU: 1.567 seconds 	/ department sequence: [1, 9, 2, 10, 7, 11, 4, 12, 5, 8, 13, 6, 3]
+OFV: 1525.0	/ CPU: 1.671 seconds 	/ department sequence: [9, 1, 2, 10, 7, 11, 4, 12, 5, 8, 13, 6, 3]
+OFV: 1533.5	/ CPU: 1.458 seconds 	/ department sequence: [13, 3, 6, 12, 8, 5, 10, 4, 11, 1, 7, 2, 9]
+OFV: 1527.0	/ CPU: 1.542 seconds 	/ department sequence: [1, 9, 2, 7, 10, 11, 8, 12, 5, 4, 13, 6, 3]
+OFV: 1525.0	/ CPU: 1.670 seconds 	/ department sequence: [13, 3, 6, 8, 12, 5, 4, 11, 10, 7, 1, 2, 9]

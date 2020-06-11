@@ -1,0 +1,30 @@
+-- Small10-9 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+-- 2020-06-10 16:40 result data
+OFV: 929.5	/ CPU: 1.749 seconds 	/ department sequence: [3, 9, 1, 6, 4, 8, 2, 5, 10, 7]
+OFV: 929.5	/ CPU: 1.639 seconds 	/ department sequence: [9, 3, 1, 6, 4, 8, 2, 5, 10, 7]
+OFV: 929.5	/ CPU: 1.674 seconds 	/ department sequence: [9, 3, 1, 6, 4, 8, 2, 5, 10, 7]
+OFV: 933.5	/ CPU: 1.778 seconds 	/ department sequence: [3, 9, 1, 6, 4, 8, 2, 5, 10, 7]
+OFV: 929.5	/ CPU: 1.832 seconds 	/ department sequence: [7, 10, 8, 5, 2, 6, 4, 1, 3, 9]
+OFV: 929.5	/ CPU: 1.617 seconds 	/ department sequence: [3, 9, 1, 6, 4, 8, 2, 5, 10, 7]
+OFV: 929.5	/ CPU: 1.454 seconds 	/ department sequence: [9, 3, 1, 6, 4, 8, 2, 5, 7, 10]
+OFV: 929.5	/ CPU: 1.737 seconds 	/ department sequence: [3, 9, 1, 6, 4, 8, 2, 5, 10, 7]
+OFV: 929.5	/ CPU: 1.263 seconds 	/ department sequence: [9, 3, 1, 6, 4, 8, 2, 5, 10, 7]
+OFV: 929.5	/ CPU: 1.433 seconds 	/ department sequence: [7, 10, 8, 5, 2, 6, 4, 1, 3, 9]
+-- Small10-9 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+-- 2020-06-10 22:18 result data
+OFV: 929.5	/ CPU: 2.092 seconds 	/ department sequence: [7, 10, 8, 5, 2, 6, 4, 1, 3, 9]
+OFV: 929.5	/ CPU: 1.408 seconds 	/ department sequence: [9, 3, 1, 6, 4, 8, 2, 5, 10, 7]
+OFV: 929.5	/ CPU: 1.299 seconds 	/ department sequence: [9, 3, 1, 6, 4, 8, 2, 5, 10, 7]
+OFV: 929.5	/ CPU: 1.314 seconds 	/ department sequence: [9, 3, 1, 6, 4, 8, 2, 5, 10, 7]
+OFV: 929.5	/ CPU: 1.395 seconds 	/ department sequence: [7, 10, 8, 5, 2, 6, 4, 1, 3, 9]
+OFV: 929.5	/ CPU: 1.252 seconds 	/ department sequence: [3, 9, 1, 6, 4, 8, 2, 5, 10, 7]
+OFV: 929.5	/ CPU: 1.340 seconds 	/ department sequence: [7, 10, 8, 5, 2, 6, 4, 1, 3, 9]
+OFV: 929.5	/ CPU: 1.181 seconds 	/ department sequence: [3, 9, 1, 6, 4, 8, 2, 5, 10, 7]
+OFV: 929.5	/ CPU: 1.262 seconds 	/ department sequence: [9, 3, 1, 6, 4, 8, 2, 5, 10, 7]
+OFV: 929.5	/ CPU: 1.361 seconds 	/ department sequence: [9, 3, 1, 6, 4, 8, 2, 5, 10, 7]

@@ -1,0 +1,15 @@
+-- Small09-6 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.0
+--------------------------------------------
+-- 2020-06-10 14:33 result data
+OFV: 4108.0	/ CPU: 1.586 seconds 	/ department sequence: [1, 6, 8, 5, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 1.553 seconds 	/ department sequence: [1, 6, 5, 8, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 1.431 seconds 	/ department sequence: [6, 1, 8, 5, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 1.429 seconds 	/ department sequence: [1, 6, 5, 8, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 1.968 seconds 	/ department sequence: [4, 9, 3, 7, 5, 2, 8, 6, 1]
+OFV: 4108.0	/ CPU: 1.496 seconds 	/ department sequence: [1, 6, 5, 8, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 1.387 seconds 	/ department sequence: [4, 9, 7, 3, 2, 5, 8, 6, 1]
+OFV: 4108.0	/ CPU: 1.377 seconds 	/ department sequence: [1, 6, 5, 8, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 1.407 seconds 	/ department sequence: [6, 1, 5, 8, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 1.454 seconds 	/ department sequence: [1, 6, 8, 5, 2, 3, 7, 9, 4]

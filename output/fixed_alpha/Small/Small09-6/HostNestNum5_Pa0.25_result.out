@@ -1,0 +1,60 @@
+-- Small09-6 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-10 14:33 result data
+OFV: 4108.0	/ CPU: 2.166 seconds 	/ department sequence: [4, 9, 7, 3, 5, 2, 8, 6, 1]
+OFV: 4108.0	/ CPU: 2.614 seconds 	/ department sequence: [9, 4, 7, 3, 5, 2, 8, 6, 1]
+OFV: 4108.0	/ CPU: 2.254 seconds 	/ department sequence: [1, 6, 8, 5, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 2.052 seconds 	/ department sequence: [6, 1, 8, 5, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 2.351 seconds 	/ department sequence: [9, 4, 7, 3, 2, 5, 8, 6, 1]
+OFV: 4108.0	/ CPU: 2.734 seconds 	/ department sequence: [9, 4, 7, 3, 5, 2, 8, 6, 1]
+OFV: 4108.0	/ CPU: 1.973 seconds 	/ department sequence: [4, 9, 3, 7, 2, 5, 8, 6, 1]
+OFV: 4108.0	/ CPU: 2.455 seconds 	/ department sequence: [1, 6, 5, 8, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 2.485 seconds 	/ department sequence: [4, 9, 7, 3, 5, 2, 8, 6, 1]
+OFV: 4108.0	/ CPU: 2.116 seconds 	/ department sequence: [1, 6, 8, 5, 2, 3, 7, 9, 4]
+-- Small09-6 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-10 14:34 result data
+OFV: 4108.0	/ CPU: 2.294 seconds 	/ department sequence: [1, 6, 8, 5, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 2.178 seconds 	/ department sequence: [6, 1, 5, 8, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 2.079 seconds 	/ department sequence: [6, 1, 5, 8, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 2.472 seconds 	/ department sequence: [9, 4, 3, 7, 5, 2, 8, 6, 1]
+OFV: 4108.0	/ CPU: 2.258 seconds 	/ department sequence: [1, 6, 5, 8, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 2.494 seconds 	/ department sequence: [9, 4, 7, 3, 5, 2, 8, 6, 1]
+OFV: 4108.0	/ CPU: 2.167 seconds 	/ department sequence: [6, 1, 8, 5, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 2.117 seconds 	/ department sequence: [6, 1, 5, 8, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 2.047 seconds 	/ department sequence: [4, 9, 3, 7, 2, 5, 8, 6, 1]
+OFV: 4108.0	/ CPU: 2.258 seconds 	/ department sequence: [1, 6, 8, 5, 2, 3, 7, 9, 4]
+-- Small09-6 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-10 14:34 result data
+OFV: 4108.0	/ CPU: 3.345 seconds 	/ department sequence: [1, 6, 8, 5, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 3.273 seconds 	/ department sequence: [6, 1, 8, 5, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 3.333 seconds 	/ department sequence: [6, 1, 5, 8, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 3.637 seconds 	/ department sequence: [4, 9, 7, 3, 5, 2, 8, 6, 1]
+OFV: 4108.0	/ CPU: 3.129 seconds 	/ department sequence: [1, 6, 8, 5, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 3.501 seconds 	/ department sequence: [4, 9, 7, 3, 2, 5, 8, 6, 1]
+OFV: 4108.0	/ CPU: 3.602 seconds 	/ department sequence: [1, 6, 8, 5, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 3.111 seconds 	/ department sequence: [1, 6, 5, 8, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 3.568 seconds 	/ department sequence: [4, 9, 7, 3, 5, 2, 8, 6, 1]
+OFV: 4108.0	/ CPU: 3.240 seconds 	/ department sequence: [6, 1, 8, 5, 2, 3, 7, 9, 4]
+-- Small09-6 result
+--------------------------------------------
+HostNestNum = 5, P_a = 0.25
+--------------------------------------------
+-- 2020-06-10 14:35 result data
+OFV: 4108.0	/ CPU: 4.355 seconds 	/ department sequence: [9, 4, 7, 3, 5, 2, 8, 6, 1]
+OFV: 4108.0	/ CPU: 4.291 seconds 	/ department sequence: [9, 4, 3, 7, 5, 2, 8, 6, 1]
+OFV: 4108.0	/ CPU: 4.516 seconds 	/ department sequence: [9, 4, 7, 3, 5, 2, 8, 6, 1]
+OFV: 4108.0	/ CPU: 4.428 seconds 	/ department sequence: [9, 4, 7, 3, 2, 5, 8, 6, 1]
+OFV: 4108.0	/ CPU: 4.626 seconds 	/ department sequence: [9, 4, 7, 3, 5, 2, 8, 6, 1]
+OFV: 4108.0	/ CPU: 4.309 seconds 	/ department sequence: [9, 4, 3, 7, 2, 5, 8, 6, 1]
+OFV: 4108.0	/ CPU: 4.564 seconds 	/ department sequence: [1, 6, 5, 8, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 4.438 seconds 	/ department sequence: [1, 6, 5, 8, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 4.404 seconds 	/ department sequence: [6, 1, 5, 8, 2, 3, 7, 9, 4]
+OFV: 4108.0	/ CPU: 4.186 seconds 	/ department sequence: [6, 1, 5, 8, 2, 3, 7, 9, 4]
