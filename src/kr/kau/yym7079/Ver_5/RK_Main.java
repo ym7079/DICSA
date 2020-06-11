@@ -17,10 +17,10 @@ class RK_Main {
     public static LinkedList<Solution> bestParamNest;
 ////instance 관련 parameter
     private static final String LAYOUT_PROB_TYPE = "DR";
-    private static final String PROB_TYPE = "Am"; //instance 문제 유형
+    private static final String PROB_TYPE = "Classical"; //instance 문제 유형
     //private static final boolean IS_CLASSICAL = (PROB_TYPE == "Classical");
-    private static final String INSTANCE_NAME = "Am12c"; //instance 문제 이름
-    private static final double OPTIMAL_OFV = 1606.5;
+    private static final String INSTANCE_NAME = "Am12e"; //instance 문제 이름
+    private static final double OPTIMAL_OFV = 16570;
 ////Dummy 관련 parameter
     private static final boolean IS_DUMMY = false; // dummy를 만들지 여부
     private static final int NUM_DUMMY = 10; // dummy department 수
@@ -51,7 +51,7 @@ class RK_Main {
 
         readProbNameSet(probNameSet);// 각 문제들의 파일명을 읽어들이는 메소드
         for(String probName : probNameSet) {
-            if (probName.contains(INSTANCE_NAME)) {
+            //if (probName.contains(INSTANCE_NAME)) {
 
                 OutputWriter summary = new OutputWriter(probName);
                 summary.writeln_clock();
@@ -89,7 +89,7 @@ class RK_Main {
 
                 Solution bestInstanceNest = Collections.min(bestParamNest);
                 bestSolution.add(bestInstanceNest);
-            }
+            //}
         }
         // Instance 별 best 값 기록
         for (Solution nest : bestSolution){
