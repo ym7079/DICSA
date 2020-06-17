@@ -9,18 +9,23 @@ class ProbDataSet {
     public static int numDepart;
     public static double totalLength;
     public static double[] length;
-    public static int[][] flow;
+    public static double[][] flow;
+    public static double[][] clearance;
 
     public static void init(String probName, boolean isDummy) throws Exception {
         dataDir = "dataset/Instance_Data/" + probName + "/";
         setDepartLength();
         setFlow();
+        if (probName.contains("Murray")){
+            setClearance();
+        }
 
         if(isDummy){
             int numDummy = RK_Main.getNumDummy();
             double lenDummy = RK_Main.getLengthDummy();
             reviseData(numDummy,lenDummy);
         }
+
     }
 
     private static void setDepartLength() throws Exception {
@@ -39,23 +44,36 @@ class ProbDataSet {
         br.close();
     }
     private static void setFlow() throws Exception {
-        flow = new int[numDepart][numDepart];
+        flow = new double[numDepart][numDepart];
 
         csvFile = dataDir + "flow.csv";
         BufferedReader br = new BufferedReader(new FileReader(csvFile));
         for(int i=0; i<numDepart; i++) {
             String[] line = br.readLine().split(",");
             for(int j=0; j<numDepart; j++) {
-                flow[i][j] = Integer.parseInt(line[j]);
+                flow[i][j] = Double.parseDouble(line[j]);
             } // for i
         } // for j
+        br.close();
+    }
+    private static void setClearance() throws Exception {
+        clearance = new double[numDepart][numDepart];
+
+        csvFile = dataDir + "clearance.csv";
+        BufferedReader br = new BufferedReader(new FileReader(csvFile));
+        for (int i = 0; i < numDepart; i++) {
+            String[] line = br.readLine().split(",");
+            for (int j = 0; j < numDepart; j++) {
+                clearance[i][j] = Double.parseDouble(line[j]);
+            }
+        }
         br.close();
     }
     private static void reviseData(int numDummy,double lenDummy) throws Exception {
         numDepart = numDepart + numDummy;
 
         double[] orgLength = length;
-        int[][] orgFlow = flow;
+        double[][] orgFlow = flow;
 
         double[] revisedLength = new double[numDepart];
         int i;
@@ -64,7 +82,7 @@ class ProbDataSet {
             else revisedLength[i] = lenDummy;
         }
 
-        int[][] revisedFlow = new int[numDepart][numDepart];
+        double[][] revisedFlow = new double[numDepart][numDepart];
         for(i=0; i<revisedFlow.length; i++){
             for(int j=0; j<revisedFlow[i].length; j++){
                 if(i<orgFlow.length & j<orgFlow.length) revisedFlow[i][j] = orgFlow[i][j];

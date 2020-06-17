@@ -23,9 +23,11 @@ public class Cplex {
 
   //Problem data variables
     private int numDepart;
-    private int[][] flowSet;
+    private double[][] flowSet;
+    private double[][] clearanceSet;
     private double[] lengthSet;
     private double L;
+    private boolean isAsymmetricFlow;
 
   //Solution variables
     public double[] cx;
@@ -35,13 +37,17 @@ public class Cplex {
         this.numDepart = problem.numDepart;
         this.flowSet = problem.flow;
         this.lengthSet = problem.length;
+        if(problem.clearance!= null) this.clearanceSet = problem.clearance;
         this.L = problem.totalLength; //Total length
     }
-    public Cplex(int numDepart, int[][] flowSet, double[] lengthSet, double L){
+    public Cplex(int numDepart, double[][] flowSet, double[] lengthSet, double L, double[][] clearanceSet){
         this.numDepart = numDepart;
         this.flowSet = flowSet;
         this.lengthSet = lengthSet;
         this.L = L; //Total length
+        if (clearanceSet != null) {
+            this.clearanceSet = clearanceSet;
+        }
     }
 //Methods
     public void setLP(){
@@ -54,7 +60,7 @@ public class Cplex {
             //𝑥𝑖 = indicate the coordinate of the center of machine 𝑖
             x = new IloNumVar[numDepart];
             for(int i=0; i<numDepart; i++){
-                x[i] = cplex.numVar(lengthSet[i]/2,L - (lengthSet[i]/2)); //constraint(11) (l_i/2) ≤ x_i ≤  L-(l_i/2)
+                x[i] = cplex.numVar(lengthSet[i]/2,Double.MAX_VALUE); //constraint(11) (l_i/2) ≤ x_i ≤  L-(l_i/2)
             }
 
             //𝑑𝑖𝑗 = indicate distance between machines 𝑖 and 𝑗
@@ -140,7 +146,7 @@ public class Cplex {
             exc.printStackTrace();
         }
     }
-    public void setInitDRLPModel(){
+    public void initDRLPModel(){
         try{
         /**Model**/
         //set new cplex model
@@ -159,8 +165,8 @@ public class Cplex {
                 distance[i] = cplex.numVarArray(numDepart,0, Double.MAX_VALUE);
                 //Constraint(6),(7) -> absolute value of distance
                 for(int j=i+1; j< numDepart; j++){ // only for upper-triangle of distance[i][j]
-                    cplex.addGe(distance[i][j], cplex.diff(x[i],x[j])); // 𝑑𝑖𝑗 ≥ 𝑥𝑖 − 𝑥𝑗
-                    cplex.addGe(distance[i][j], cplex.diff(x[j],x[i])); // 𝑑𝑖𝑗 ≥ 𝑥𝑗 − 𝑥𝑖
+                    cplex.addGe(distance[i][j], cplex.diff(x[i],x[j])); // 𝑑𝑖𝑗 ≥ 𝑥𝑖 − 𝑥𝑗 + a𝑖𝑗
+                    cplex.addGe(distance[i][j], cplex.diff(x[j],x[i])); // 𝑑𝑖𝑗 ≥ 𝑥𝑗 − 𝑥𝑖 + a𝑖𝑗
                 }
             }
 
@@ -188,7 +194,11 @@ public class Cplex {
             for (int i = 0; i < numDepart; i++) {
                 for (int j = 0; j < numDepart; j++) {
                     if (i==j) continue;
-                    overlappingPrevention[i][j] = cplex.le(cplex.sum(x[i],0.5*(lengthSet[i]+lengthSet[j])),x[j]);
+                    if (clearanceSet == null){
+                        overlappingPrevention[i][j] = cplex.le(cplex.sum(x[i],0.5*(lengthSet[i]+lengthSet[j])),x[j]);
+                    }else{
+                        overlappingPrevention[i][j] = cplex.le(cplex.sum(x[i],0.5*(lengthSet[i]+lengthSet[j])+clearanceSet[i][j]),x[j]);
+                    }
                 }
             }
         }catch(IloException exc){
@@ -276,7 +286,7 @@ public class Cplex {
             //System.out.println("Solution status: " + cplex.getStatus());
             //System.out.println("LP Object values: " + cplex.getObjValue());
             objValue = cplex.getObjValue();
-
+            cx = cplex.getValues(x);
         }else{
             cplex.output().println("Solution status = " + cplex.getStatus());
         }
