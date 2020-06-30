@@ -1,6 +1,7 @@
 package kr.kau.yym7079.Common;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 
 public class ProbDataSet {
@@ -10,14 +11,15 @@ public class ProbDataSet {
     public final int numDepart;
     public final double totalLength;
     public final double[] length;
-    public final int[][] flow;
+    public final double[][] flow;
+    public double[][] clearance;
 //Constructor
     public ProbDataSet(String probName) throws Exception{
         BufferedReader br;
         String[] line;
-        //set department length set
-        dataDir = "dataset/Instance_Data/" + probName + "/";
 
+        dataDir = "dataset/Instance_Data/" + probName + "/";
+    //set department length
         csvFile = dataDir + "length.csv";
         br = new BufferedReader(new FileReader(csvFile));
 
@@ -34,8 +36,8 @@ public class ProbDataSet {
         br.close();
         //setDepartLength();
 
-        //set flow matrix
-        flow = new int[numDepart][numDepart];
+    //set flow matrix
+        flow = new double[numDepart][numDepart];
 
         csvFile = dataDir + "flow.csv";
         br = new BufferedReader(new FileReader(csvFile));
@@ -47,6 +49,22 @@ public class ProbDataSet {
         } // for j
         br.close();
         //setFlow();
+
+    //set clearance matrix
+        if (probName.contains("Murray")){
+            csvFile = dataDir + "clearance.csv";
+            File clearanceFile = new File(csvFile);
+            if (clearanceFile.exists()){
+                br = new BufferedReader(new FileReader(csvFile));
+                for(int i=0; i<numDepart; i++) {
+                    line = br.readLine().split(",");
+                    for(int j=0; j<numDepart; j++) {
+                        clearance[i][j] = Double.parseDouble(line[j]);
+                    } // for i
+                } // for j
+                br.close();
+            }
+        }
     }
 //Methods
     private void setDepartLength() throws Exception {
