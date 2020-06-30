@@ -6,8 +6,6 @@ import java.io.FileReader;
 
 public class ProbDataSet {
 //Variables
-    private String dataDir, csvFile;
-//-----------------------------
     public final int numDepart;
     public final double totalLength;
     public final double[] length;
@@ -17,10 +15,9 @@ public class ProbDataSet {
     public ProbDataSet(String probName) throws Exception{
         BufferedReader br;
         String[] line;
-
-        dataDir = "dataset/Instance_Data/" + probName + "/";
+        String dataDir = "dataset/Instance_Data/" + probName + "/";
     //set department length
-        csvFile = dataDir + "length.csv";
+        String csvFile = dataDir + "length.csv";
         br = new BufferedReader(new FileReader(csvFile));
 
         numDepart =Integer.parseInt(br.readLine().split(",")[0]);
