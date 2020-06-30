@@ -15,10 +15,10 @@ public class Gurobi {
     private GRBVar[] x;
     private GRBLinExpr[][] overlappingPrevention;
   //Problem data variables
-    private int numDepart;
-    private double[][] flowSet;
+    private final int numDepart;
+    private final double[][] flowSet;
     private double[][] clearanceSet;
-    private double[] lengthSet;
+    private final double[] lengthSet;
     private double L;
 
   //Solution variables
@@ -29,16 +29,20 @@ public class Gurobi {
         this.numDepart = problem.numDepart;
         this.flowSet = problem.flow;
         this.lengthSet = problem.length;
-        if(problem.clearance!= null) this.clearanceSet = problem.clearance;
-        this.L = problem.totalLength; //Total length
+        if(problem.clearance!= null) {
+            this.clearanceSet = problem.clearance;
+        }else{
+            this.L = problem.totalLength; //Total length
+        }
     }
     public Gurobi(int numDepart, double[][] flowSet, double[] lengthSet, double L, double[][] clearanceSet){
         this.numDepart = numDepart;
         this.flowSet = flowSet;
         this.lengthSet = lengthSet;
-        this.L = L; //Total length
         if (clearanceSet != null) {
             this.clearanceSet = clearanceSet;
+        }else{
+            this.L = L; //Total length
         }
     }
 
@@ -64,7 +68,10 @@ public class Gurobi {
                 dist[i] = model.addVars(null,null,null,null,null,0,numDepart);
                 for (int j = 0; j < numDepart; j++) {
                     //dist[i][j] = model.addVar(lengthSet[i]/2,L- lengthSet[i]/2,0,GRB.CONTINUOUS,"dist["+i+1+"]["+j+1+"]");
-                    if (i >= j) continue; // only for upper-triangle of distance[i][j]
+                    if (i == j) continue;
+                    if (clearanceSet == null){
+                        if (i > j) continue; // only for upper-triangle of distance[i][j]
+                    }
                     GRBLinExpr distExpr = new GRBLinExpr();
                     distExpr.addTerm(1.0, x[i]); distExpr.addTerm(-1.0, x[j]); // -> 𝑥𝑖 − 𝑥𝑗
                     model.addConstr(dist[i][j],GRB.GREATER_EQUAL,distExpr,"distance Const["+(i+1)+"]["+(j+1)+"]"); // 𝑑𝑖𝑗 ≥ 𝑥𝑖 − 𝑥𝑗
@@ -77,8 +84,12 @@ public class Gurobi {
 
           // Set objective: minimize fij×dij
             GRBLinExpr objectiveFunc = new GRBLinExpr();
-            for (int i = 0; i < numDepart - 1; i++) {
-                for (int j = i+1; j < numDepart; j++) { // only for upper-triangle of flow[i][j]*distance[i][j]
+            for (int i = 0; i < numDepart; i++) {
+                for (int j = 0; j < numDepart; j++) { // only for upper-triangle of flow[i][j]*distance[i][j]
+                    if (i == j) continue;
+                    if (clearanceSet == null){
+                        if (i > j) continue; // only for upper-triangle of distance[i][j]
+                    }
                     objectiveFunc.addTerm(flowSet[i][j],dist[i][j]);
                 }
             }
@@ -120,6 +131,8 @@ public class Gurobi {
       // Optimize model
         model.set(GRB.IntParam.OutputFlag,0);
         model.set(GRB.IntParam.LogToConsole,0);
+        model.set(GRB.IntParam.SolutionLimit,1);
+        model.set(GRB.IntParam.Threads,1);
         model.optimize();
 
         cx = new double[numDepart];
@@ -131,18 +144,19 @@ public class Gurobi {
         objValue = model.get(GRB.DoubleAttr.ObjVal);
 
       // deactivate constraints
-        for (int i = 1; i < sizeOfUpperSeq; i++) {
+        for (int i = 0; i < numDepart; i++) {
+            if (OLPConstr[i]!=null) model.remove(OLPConstr[i]);
+        }
+        /*for (int i = 1; i < sizeOfUpperSeq; i++) {
             left = upperDepartSeq.get(i-1)-1;
-            right = upperDepartSeq.get(i)-1;
             //activate overlapping prevention constraints
             model.remove(OLPConstr[left]);
         }
         for (int i = 1; i < sizeOfLowerSeq; i++) {
             left = lowerDepartSeq.get(i-1)-1;
-            right = lowerDepartSeq.get(i)-1;
             //activate overlapping prevention constraints
             model.remove(OLPConstr[left]);
-        }
+        } */
     }
     public void disposeDRLPModel() throws GRBException {
         // Dispose of model and environment
