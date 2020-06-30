@@ -44,7 +44,7 @@ public class ProbDataSet {
         for(int i=0; i<numDepart; i++) {
             line = br.readLine().split(",");
             for(int j=0; j<numDepart; j++) {
-                flow[i][j] = Integer.parseInt(line[j]);
+                flow[i][j] = Double.parseDouble(line[j]);
             } // for i
         } // for j
         br.close();
@@ -52,6 +52,8 @@ public class ProbDataSet {
 
     //set clearance matrix
         if (probName.contains("Murray")){
+            clearance = new double[numDepart][numDepart];
+
             csvFile = dataDir + "clearance.csv";
             File clearanceFile = new File(csvFile);
             if (clearanceFile.exists()){
